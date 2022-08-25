@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+   />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 2. Подключим jQuery UI -->
+    <link type="text/css" href="myTheme/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="myTheme/jquery-ui.js"></script>
+   <style>
+    #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+    #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+    #sortable li span { position: absolute; margin-left: -1.3em; }
+   </style>
+</head>
+<body>
+    <header>
+        <div class="container container_head">
+            <div class="logo_block">
+                <a href="#" class="logo"><img src="images/head_logo.png" alt=""></a>
+                <h2>Фотограф Назарій Клюкай</h2>
+            </div>
+            <div class="navigation_block">
+                <nav class="navigation">
+                    <ul>
+                        <li class="link_page_block">
+                            <a href="#" class="link_page">Home</a>
+                        </li>
+                        <li class="link_page_block">
+                            <a href="portfolio.html" class="link_page">Портфоліо</a>
+                        </li>
+                        <li class="link_page_block">
+                            <a href="prices.html" class="link_page">Ціни</a>
+                        </li>
+                        <li class="link_page_block">
+                            <a href="contacts.html" class="link_page">Контакти</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="contacts_block" id="contacts">
+                    <a class="contact_block" id="contact" href="#">
+                            <img src="images/facebook_icon2.png" alt="" class="icon">
+                    </a>
+                    <a class="contact_block" id="contact" href="#">
+                            <img src="images/instagram2_icon.png" alt="" class="icon">
+                    </a>
+                    <a class="contact_block" id="contact" href="#">
+                            <img src="images/youtube2_icon.png" alt="" class="icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+     <main>
+        <div class="container container_1">
+            <div class="slider" id="slider1">
+                <div class="arrow left"><img src="images/left_arrow1.png" alt="" class="arrow_img" id="left"></div>
+                <div class="slider_blocks1">
+                        <!-- <div class="slider_block" data-number="-5"><img src="images/nio-et5.jpg" alt="" class="slider_img"></div>
+                        <div class="slider_block" data-number="-4"><img src="images/audi-rs-e-tron-gt.jpg" alt="" class="slider_img"></div>
+                        <div class="slider_block" data-number="-3"><img src="images/aston-martin.jpg" alt="" class="slider_img"></div>
+                        <div class="slider_block" data-number="-2"><img src="images/фотограф-день-народження-борщів.jpg" alt="" class="slider_img"></div>
+                        <div class="slider_block" data-number="-1"><img src="images/Розпис-Тернопіль-1920x1280.jpg" alt="" class="slider_img"></div> -->
+                    <div class="slider_blocks" id="slider_blocks">
+                        <div class="slider_block selected" data-number="0"><img src="images/wedding_photo.jpg" alt="" class="slider_img"></div>
+                        <div class="slider_block" data-number="1"><img src="images/Розпис-Тернопіль-1920x1280.jpg" alt="" class="slider_img"></div>
+                        <div class="slider_block" data-number="2"><img src="images/фотограф-день-народження-борщів.jpg" alt="" class="slider_img"></div>
+                        <div class="slider_block" data-number="3"><img src="images/розпис-Бережани.jpg" alt="" class="slider_img"></div>
+                        <div class="slider_block" data-number="4"><img src="images/весільна-фотокнига.jpg" alt="" class="slider_img"></div>
+                        <div class="slider_block" data-number="5"><img src="images/MG_6504.jpg" alt="" class="slider_img"></div>
+                        <div class="slider_block" data-number="6"><img src="images/фотограф-на-випускний-чортків.jpg" alt="" class="slider_img"></div>
+                    </div><!-- <div class="slider_block" data-number="3"><img src="images/aston-martin.jpg" alt="" class="slider_img"></div>
+                        <div class="slider_block" data-number="4"><img src="images/audi-rs-e-tron-gt.jpg" alt="" class="slider_img"></div>
+                        <div class="slider_block" data-number="5"><img src="images/nio-et5.jpg" alt="" class="slider_img"></div>
+                        <div class="slider_block" data-number="7"><img src="images/graduation_photobook.jpg" alt="" class="slider_img"></div> -->
+                </div>
+                <div class="arrow right"><img src="images/right_arrow1.png" alt="" class="arrow_img" id="right"></div>
+            </div>
+            <!-- <div class="slider_buttons">
+                <div class="slider_button selected"></div>
+                <div class="slider_button"></div>
+                <div class="slider_button"></div>
+            </div> -->
+        </div>
+    
+        <div class="container container_2">
+            <div class="photographer_info">
+                <div class="photographer_info_page">
+                    <div class="photographer_icon"><img src="images/photo_photographer.png" alt="" class="icon"></div>
+                    <div class="photographer_contacts">
+                        <div class="photographer_contact"><a href="#">Viber</a></div>
+                        <div class="photographer_contact"><a href="#">Telegram</a></div>
+                        <div class="photographer_contact"><a href="#">Зателефонувати</a></div>
+                    </div>
+                </div>
+                <div class="photographer_info_text">
+                    <h1 class="name">ФОТОГРАФ НАЗАРІЙ КЛЮКАЙ</h1>
+                    <div class="infos">
+                        <p class="info">Привіт! Мене звати Назарій. Якщо Вас цікавить фотограф, то Ви
+                        знайшли потрібну сторінку. Я займаюсь професійною фотозйомкою
+                        весілля, випускних вечорів, фотографую для вінєтки, роблю красиві
+                        кадри святкування день народження, захоплююсь портретними
+                        фотосесіями за сценарієм.</p>
+                        <p class="info">Я можу більше поспілкуватись з Вами про Ваше свято, запропонувати
+                        варіанти, висловити своє професійне бачення, щоб Ваше свято
+                        пройшло на ура.</p>
+                        <p class="info">Якщо вам зручно, можете зателефонувати мені. Якщо ж вам краще у
+                        текстовому форматі, можемо почати чат у вайбері, інстаграм чи
+                        фейсбук. Радий бути Вам корисний.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="container container_3">
+            <div class="last_work_block" id="">
+                <h1 class="headline">Останні роботи</h1>
+                <div class="last_work_slider" id="slider2">
+                    <div class="arrow left"><img src="images/left_arrow1.png" class='left' alt=""></div>
+                    <div class="last_work_slider_blocks">
+                        <div class="last_work selected" id="last_work" data-number="0">
+                           <div class="last_work_img"><div class="last_work_layer"></div><img src="images/wedding_photo.jpg" alt="" class="photo">
+                        </div>
+                           <div class="last_work_info">
+                                <h2 class="name">Name1 & Name2</h2>
+                                <h2 class="location">Location: Kyiv</h2>
+                                <h2 class="photo_type">Wedding Photo</h2>
+                           </div>
+                        </div>
+                        <div class="last_work " id="last_work" data-number="1">
+                            <div class="last_work_img"><div class="last_work_layer"></div><img src="images/Розпис-Тернопіль-1920x1280.jpg" alt="" class="photo">
+                        </div>
+                            <div class="last_work_info">
+                                 <h2 class="name">Name3 & Name4</h2>
+                                 <h2 class="location">Location: Lviv</h2>
+                                 <h2 class="photo_type">Lovestory</h2>
+                            </div>
+                         </div>
+                         <div class="last_work" id="last_work" data-number="2">
+                            <div class="last_work_img"><div class="last_work_layer"></div><img src="images/фотограф-день-народження-борщів.jpg" alt="" class="photo">
+                        </div>
+                            <div class="last_work_info">
+                                 <h2 class="name">Name5 & Name6</h2>
+                                 <h2 class="location">Location: Ternopil</h2>
+                                 <h2 class="photo_type">School events</h2>
+                            </div>
+                         </div>
+                        <div class="slider_buttons">
+                            <div class="slider_button selected"></div>
+                            <div class="slider_button"></div>
+                            <div class="slider_button"></div>
+                        </div>
+                    </div>
+                    <div class="arrow right"><img src="images/right_arrow1.png" class="right" alt=""></div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container container_4">
+            <div class="portfolio_block">
+                <h1 class="headline">Портфоліо</h1>
+                <div class="photo_options">
+                    <div class="photo_option selected" data-gallery="wedding">Весільне фото
+                    </div>
+                    <div class="photo_option" data-gallery="lovestory">Lovestory
+                    </div>
+                    <div class="photo_option" data-gallery="school">Шкільні подіі/Причастя
+                    </div>
+                    <div class="photo_option" data-gallery="birthday">Фото день народження
+                    </div>
+                    <div class="photo_option" data-gallery="vignette">Фото на вінєтку
+                    </div>
+                    <div class="photo_option" data-gallery="individual">Індивідуальна фотосесія
+                    </div>
+                </div>
+                <div class="portfolio_galleries">
+                    <div class="photo_gallery wedding" id="wedding">
+                        <!-- <div class="photos row1">
+                            <div class="photo one"></div>
+                            <div class="photo two"></div>
+                        </div>
+                        <div class="photos row2">
+                            <div class="photo three"></div>
+                            <div class="photo four"></div>
+                            <div class="photo five"></div>
+                        </div> -->
+                        <div class="photos row1">
+                            <div class="photo one"><img src="images/wedding_photos/фотограф-на-весілля-Чортків-1.jpg" alt=""></div>
+                            <div class="photo two"><img src="images/wedding_photos/фотограф-на-весілля-Борщів.jpg" alt=""></div>
+                        </div>
+                        <div class="photos row2">
+                            <div class="photo one"><img src="images/wedding_photos/фотограф-вінчання.jpg" alt=""></div>
+                            <div class="photo two"><img src="images/wedding_photos/фотограф-весільний.jpg" alt=""></div>
+                            <div class="photo three"><img src="images/wedding_photos/фотограф-Борщів.jpg" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="photo_gallery lovestory" id="lovestory">
+                        <!-- <div class="photos row1">
+                            <div class="photo one" style="background-color: red;"></div>
+                            <div class="photo two"></div>
+                        </div>
+                        <div class="photos row2">
+                            <div class="photo three"></div>
+                            <div class="photo four"></div>
+                            <div class="photo five"></div>
+                        </div> -->
+                        <div class="photos row1">
+                            <div class="photo one"><img src="images/lovestory_photos/фотограф-на-весілля-Чортків.jpg" alt=""></div>
+                            <div class="photo two"><img src="images/lovestory_photos/фотограф-весілля.jpg" alt=""></div>
+                        </div>
+                        <div class="photos row2">
+                            <div class="photo one"><img src="images/lovestory_photos/фото-на-весілля-Чортків.jpg" alt=""></div>
+                            <div class="photo two"><img src="images/lovestory_photos/фото-весілля-Чортків.jpg" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="photo_gallery school" id="school">
+                        <!-- <div class="photos row1">
+                            <div class="photo one" style="background-color: orange;"></div>
+                            <div class="photo two"></div>
+                        </div>
+                        <div class="photos row2">
+                            <div class="photo three"></div>
+                            <div class="photo four"></div>
+                        </div> -->
+                        <div class="photos row1">
+                            <div class="photo one"><img src="images/school_events_photos/фотограф-на-випускний-чортків.jpg" alt=""></div>
+                            <div class="photo two"><img src="images/school_events_photos/фотограф-на-випускний-заліщики.jpg" alt=""></div>
+                        </div>
+                        <div class="photos row2">
+                            <div class="photo one"><img src="images/school_events_photos/фотограф-на-випускний-гусятин.jpg" alt=""></div>
+                            <div class="photo two"><img src="images/school_events_photos/фотограф-на-випускний-борщів.jpg" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="photo_gallery birthday" id="birthday">
+                        <!-- <div class="photos row1">
+                            <div class="photo one" style="background-color: green;"></div>
+                            <div class="photo two"></div>
+                        </div>
+                        <div class="photos row2">
+                            <div class="photo three"></div>
+                            <div class="photo four"></div>
+                        </div> -->
+                        <div class="photos row1">
+                            <div class="photo one"><img src="images/birthday_photos/фотограф-день-народження-чортків.jpg" alt=""></div>
+                            <div class="photo two"><img src="images/birthday_photos/фотограф-день-народження-заліщики.jpg" alt=""></div>
+                        </div>
+                        <div class="photos row2">
+                            <div class="photo one"><img src="images/birthday_photos/фотограф-день-народження-борщів (1).jpg" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="photo_gallery vignette" id="vignette">
+                        <!-- <div class="photos row1">
+                            <div class="photo one" style="background-color: black;"></div>
+                            <div class="photo two"></div>
+                        </div>
+                        <div class="photos row2">
+                            <div class="photo three"></div>
+                            <div class="photo four"></div>
+                        </div> -->
+                        <div class="photos row1">
+                            <div class="photo one"><img src="images/vignette_photos/фотограф-вінєтка-чортків.jpg" alt=""></div>
+                            <div class="photo two"><img src="images/vignette_photos/портретний-фотограф-заліщики.jpg" alt=""></div>
+                        </div>
+                        <div class="photos row2">
+                            <div class="photo one"><img src="images/vignette_photos/портретний-фотограф-тернопіль.jpg" alt=""></div>
+                            <div class="photo two"><img src="images/vignette_photos/IMG_5498-1.jpg" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="photo_gallery individual" id="individual">
+                        <!-- <div class="photos row1">
+                            <div class="photo one" style="background-color: blue;"></div>
+                            <div class="photo two"></div>
+                        </div>
+                        <div class="photos row2">
+                            <div class="photo three"></div>
+                            <div class="photo four"></div>
+                            <div class="photo five"></div>
+                        </div> -->
+                        <div class="photos row1">
+                            <div class="photo one"><img src="images/individual_photos/портретний-фотограф-чортків.jpg" alt=""></div>
+                            <div class="photo two"><img src="images/individual_photos/портретний-фотограф-тернопіль.jpg" alt=""></div>
+                        </div>
+                        <div class="photos row2">
+                            <div class="photo one"><img src="images/individual_photos/портретний-фотограф-заліщики.jpg" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="more_info"><a href="portfolio.html">Більше фоток...</a></div>
+                </div>
+            </div>
+        </div>
+         <!-- <div class="slider_photos"> -->
+            <div class="container_slider">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                    <!-- Slides -->
+                        <div class="swiper-slide"><img src="images/aston-martin.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="images/audi-rs-e-tron-gt.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="images/maserati-mc20.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="images/nio-et5.jpg" alt=""></div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                
+                </div>
+                <button id="close_slider" onclick="closeSlider()">Close</button>
+            </div>
+        <!-- </div> -->
+    <!--  -->
+    
+        <div class="container container_5">
+            <div class="additional_services_block">
+                <h1 class="headline">Додаткові послуги</h1>
+                <div class="additional_services">
+                    <div class="additional_service printed_photos">
+                        <!-- <img src="images/printed_photos_grey.png" alt=""> -->
+                        <!--<div class="service_name">--><h3><a href="prices_count.html">ДРУК ФОТО</a></h3><!--</div>-->
+                    </div>
+                    <div class="additional_service wedding_photobook">
+                        <!-- <img src="images/wedding_photobook_grey.png" alt=""> -->
+                        <!--<div class="service_name">--><h3><a href="photobooks.html">ФОТОКНИГИ</a></h3><!--</div>-->
+                    </div>
+                    <div class="additional_service photo_packaging">
+                        <!-- <img src="images/photo_packaging_grey.png" alt=""> -->
+                        <!--<div class="service_name">--><h3><a href="graduation_photobooks.html">ПАКУВАННЯ</a></h3><!--</div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container container_questions">
+            <h1 class="headline">Питання</h1>
+            <div class="question_blocks">
+                <div class="question_block" data-class="0">
+                    <div class="question">
+                        <p class="question_text">Lorem, ipsum dolor.</p>
+                        <!-- <div class="answer_button"></div> -->
+                        <button class="answer_button answer_button0">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div class="answer answer0">
+                        <p class="answer_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Ullam reiciendis laboriosam veniam. Eos distinctio molestias consequuntur!
+                        Voluptatibus aut molestias ratione.</p>
+                    </div>
+                </div>
+                <div class="question_block" data-class="1">
+                    <div class="question">
+                        <p class="question_text">Lorem ipsum dolor sit amet.</p>
+                        <button class="answer_button answer_button1">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div class="answer answer1">
+                        <p class="answer_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Ullam reiciendis laboriosam veniam. Eos distinctio molestias consequuntur!
+                        Voluptatibus aut molestias ratione.</p>
+                    </div>
+                </div>
+                <div class="question_block" data-class="2">
+                    <div class="question">
+                        <p class="question_text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <button class="answer_button answer_button2">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div class="answer answer2">
+                        <p class="answer_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Ullam reiciendis laboriosam veniam. Eos distinctio molestias consequuntur!
+                        Voluptatibus aut molestias ratione.</p>
+                    </div>
+                </div>
+                <div class="question_block" data-class="3">
+                    <div class="question">
+                        <p class="question_text">Lorem ipsum dolor sit amet.</p>
+                        <button class="answer_button answer_button3">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div class="answer answer3">
+                        <p class="answer_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Ullam reiciendis laboriosam veniam. Eos distinctio molestias consequuntur!
+                        Voluptatibus aut molestias ratione.</p>
+                    </div>
+                </div>
+                <div class="question_block" data-class="4">
+                    <div class="question">
+                        <p class="question_text">Lorem ipsum dolor sit.</p>
+                        <button class="answer_button answer_button4">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div class="answer answer4">
+                        <p class="answer_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Ullam reiciendis laboriosam veniam. Eos distinctio molestias consequuntur!
+                        Voluptatibus aut molestias ratione.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container container_6">
+            <div class="photographer_quality_block">
+                <h1 class="headline">Вам сподобається зі мною працювати, тому що:</h1>
+                <div class="photographer_quality">
+                    <div class="quality">
+                        <img src="images/image_gallery.png" alt="image gallery" class="quality_icon">
+                        <h3 class="quality_name">Lorem ipsum</h3>
+                        <p class="quality_descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    </div>
+                    <div class="quality">
+                        <img src="images/camera.png" alt="camera" class="quality_icon">
+                        <h3 class="quality_name">Lorem ipsum</h3>
+                        <p class="quality_descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    </div>
+                    <div class="quality">
+                        <img src="images/certificate.png" alt="certificate" class="quality_icon">
+                        <h3 class="quality_name">Lorem ipsum</h3>
+                        <p class="quality_descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+   <!-- </main> -->
+    
+         <div class="container container_7">
+            <div class="feedback_block">
+                <h1 class="headline">Ви можете зв’язатися зі мною:</h1>
+                <form action="mail.php" class="user_info" method="POST">
+                    <input type="text" name="user_name" class="input name" id="user_name" placeholder="Ваше ім'я:">
+                    <p class="error name">Введіть ще раз ваше ім'я</p>
+                    <input type="tel" name="user_phone" class="input phone" id="user_phone" placeholder="Номер телефону:">
+                    <p class="error phone">Введіть ще раз ваш телефон</p>
+                    <input type="text" name="user_place" class="input place" id="user_place" placeholder="Місце зйомки">
+                    <p class="error place">Введіть ще раз місце зйомки</p>
+                    <input type="text" id="datepicker" name="user_date" class="input date" placeholder="Дата:"></p>
+                    <p class="error date">Введіть дату зйомки</p>
+                    <!-- <button type="submit" class="sendButton" onclick="sendInfo()">Записатися</button> -->
+                    <button type="button" class="sendButton" onclick="sendInfo()">Записатися</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container container_footer">
+            <div class="photographer_info">
+                <h3 class="message">Художник, що малює мить 2022</h3>
+                <p class="email"><b>Email:</b> klyukai.nazarko@gmail.com</p>
+                <p class="phone_num"><b>Телефон:</b> +380973292182</p>
+            </div>
+            <div class="photographer_icon">
+                <img src="images/head_logo.png" class="logo" alt="">
+            </div>
+            <div class="photographer_contacts">
+                <h3 class="social_headline">Соціальні мережі</h3>
+                <div class="social_icons">
+                    <div class="icon"><img src="images/facebook_icon2.png" alt=""></div>
+                    <div class="icon"><img src="images/instagram2_icon.png" alt=""></div>
+                    <div class="icon"><img src="images/youtube2_icon.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            });
+    </script>
+
+    <script src="js/script.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prices Count page</title>
+    <link rel="stylesheet" href="css/style4.css">
+</head>
+<body>
+    <header>
+        <div class="container container_head">
+            <div class="logo_block">
+                <a href="#" class="logo"><img src="images/head_logo.png" alt=""></a>
+                <h2>Фотограф Назарій Клюкай</h2>
+            </div>
+            <div class="navigation_block">
+                <nav class="navigation">
+                    <ul>
+                        <li class="link_page_block">
+                            <a href="index.html" class="link_page">Home</a>
+                        </li>
+                        <li class="link_page_block">
+                            <a href="portfolio.html" class="link_page">Портфоліо</a>
+                        </li>
+                        <li class="link_page_block">
+                            <a href="prices.html" class="link_page">Ціни</a>
+                        </li>
+                        <li class="link_page_block">
+                            <a href="contacts.html" class="link_page">Контакти</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="contacts_block" id="contacts">
+                    <a class="contact_block" id="contact" href="#">
+                            <img src="images/facebook_icon2.png" alt="" class="icon">
+                    </a>
+                    <a class="contact_block" id="contact" href="#">
+                            <img src="images/instagram2_icon.png" alt="" class="icon">
+                    </a>
+                    <a class="contact_block" id="contact" href="#">
+                            <img src="images/youtube2_icon.png" alt="" class="icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container container_count_price">
+            <h1 class="headline">Розрахунок вартості</h1>
+            <div class="count_prices_block">
+                <div class="count count_photos">
+                    <h2>Друк фотографій</h2>
+                    <p>Вартість одного фото:</p>    
+                    <form action="">
+                        <label for="">Виберіть розмір фото:</label>
+                        <!-- <input type="text"> -->
+                        <select name="photo_size" id="photo_size">
+                            <option value="9">9*13</option>
+                            <option value="10">10*13</option>
+                            <option value="11">11*13</option>
+                            <option value="12">12*13</option>
+                            <option value="13">13*13</option>
+                            <option value="14">14*13</option>
+                            <option value="15">15*13</option>
+                            <option value="16">16*13</option>
+                            <option value="17">17*13</option>
+                            <option value="18">18*13</option>
+                        </select>
+                    </form>
+                    <form action="">
+                        <label for="">Кількість фотографій:</label>
+                        <input type="number" name="number_photos" id="number_photos" min="0">
+                    </form>
+                </div>
+                <div class="count count_price">
+                    <h2>Загальна вартість</h2>
+                    <div class="photo_price_one">
+                        <p>Вартість одного фото:</p>
+                        <p id="price_one_val">7</p>
+                    </div>
+                    <div class="photo_price_nums">
+                        <p>Кількість фотографій:</p>
+                        <p id="price_nums_val">0</p>
+                    </div>
+                    <hr>
+                    <div class="all_sum">
+                        <h2>Сума</h2>
+                        <p class="final_price">UAH <span id="final_price_val">0.00</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container container_footer">
+            <div class="photographer_info">
+                <h3 class="message">Художник, що малює мить 2022</h3>
+                <p class="email"><b>Email:</b> klyukai.nazarko@gmail.com</p>
+                <p class="phone_num"><b>Телефон:</b> +380973292182</p>
+            </div>
+            <div class="photographer_icon">
+                <img src="images/head_logo.png" class="logo" alt="">
+            </div>
+            <div class="photographer_contacts">
+                <h3 class="social_headline">Соціальні мережі</h3>
+                <div class="social_icons">
+                    <div class="icon"><img src="images/facebook_icon2.png" alt=""></div>
+                    <div class="icon"><img src="images/instagram2_icon.png" alt=""></div>
+                    <div class="icon"><img src="images/youtube2_icon.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script1.js"></script>
+</body>
+</html>

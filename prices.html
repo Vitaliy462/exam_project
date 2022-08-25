@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prices</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    
+ </head>
+ <body>
+     <header>
+         <div class="container container_head">
+             <div class="logo_block">
+                 <a href="#" class="logo"><img src="images/head_logo.png" alt=""></a>
+                 <h2>Фотограф Назарій Клюкай</h2>
+             </div>
+             <div class="navigation_block">
+                 <nav class="navigation">
+                     <ul>
+                         <li class="link_page_block">
+                             <a href="index.html" class="link_page">Home</a>
+                         </li>
+                         <li class="link_page_block">
+                             <a href="portfolio.html" class="link_page">Портфоліо</a>
+                         </li>
+                         <li class="link_page_block">
+                             <a href="#" class="link_page">Ціни</a>
+                         </li>
+                         <li class="link_page_block">
+                             <a href="contacts.html" class="link_page">Контакти</a>
+                         </li>
+                     </ul>
+                 </nav>
+                 <div class="contacts_block" id="contacts">
+                     <a class="contact_block" id="contact" href="#">
+                             <img src="images/facebook_icon2.png" alt="" class="icon">
+                     </a>
+                     <a class="contact_block" id="contact" href="#">
+                             <img src="images/instagram2_icon.png" alt="" class="icon">
+                     </a>
+                     <a class="contact_block" id="contact" href="#">
+                             <img src="images/youtube2_icon.png" alt="" class="icon">
+                     </a>
+                 </div>
+             </div>
+         </div>
+     </header>
+    <main>
+        <div class="container container_price">
+            <h1 class="headline">Прайс послуг</h1>
+            <ul class="photo_type_prices" onclick="selectPrice(event)">
+                <li class="selected" data-price="wedding">Весільне фото
+                    Прайс</li>
+                <li data-price="lovestory">Lovestory | Розпис прайс</li>
+                <li data-price="school" class="school_opt" id="school_opt">Шкільні подіі/Причастя
+                    Прайс
+                    <div class="popup" id="popup" >
+                        <p data-schoolType="prom_photo_price">ФОТОСЕСІЯ ВИПУСКНОГО БАЛУ</p>
+                        <p data-schoolType="school_photo_price">ФОТОСЕСІЯ ПЕРШЕ ВЕРЕСНЯ/ОСТАННІЙ ДЗВІНОК</p>
+                        <p data-schoolType="first_photo_price">ФОТОСЕСІЯ ПЕРШОГО ПРИЧАСТЯ</p>
+                    </div>
+                </li>
+                <li data-price="birthday">Фото день народження
+                    прайс</li>
+                <li data-price="vignette">Фото на вінєтку
+                    прайс</li>
+                <li data-price="individual">Портретне фото
+                    прайс</li>
+            </ul>
+            <div class="all_prices" id="all_prices">
+                <div class="prices selected" id="wedding">
+                    <div class="price">
+                        <div class="price_text">
+                            <h2 class="price_name">Classic</h2>
+                            <ul class="price_services">
+                                <li>* Фотозйомка весілля від 09:00 до 22:00</li>
+                                <li>* Консультація та обговорення таймінгу свята  </li>
+                                <li>* Ретуш 10-ти фото для соцмереж </li>
+                                <li>* 15 друкованих фотографій  розміром 15*20 
+                                    в дизайнерській коробці</li>
+                                <li>* від 400 оброблених цифрових фото 
+                                    на дизайнерській флешці</li>
+                            </ul>
+                        </div>
+                        <div class="price_info">
+                            <p class="work_term">Термін роботи 1 місяць</p>
+                            <p class="price_value">300$</p>
+                            <button class="details_button">Детальніше</button>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="price_text">
+                            <h2 class="price_name">Standart</h2>
+                            <ul class="price_services">
+                                <li>* Фотозйомка весілля від 09:00 до 22:00</li>
+                                <li>* Консультація та обговорення таймінгу свята  </li>
+                                <li>* Післявесільна фотосесія</li>
+                                <li>* Ретуш 30-ти фото для соцмереж </li>
+                                <li>* 30 друкованих фотографій  розміром 15*20 
+                                    в дизайнерській коробці</li>
+                                <li>* від 600 оброблених цифрових фото 
+                                    на дизайнерській флешці  </li>
+                                <li>* Фотокнига розміром 30*30, 15 розворотів</li>
+                            </ul>
+                        </div>
+                        <div class="price_info">
+                            <p class="work_term">Термін роботи 2 місяці</p>
+                            <p class="price_value">450$</p>
+                            <button class="details_button">Детальніше</button>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="price_text">
+                            <h2 class="price_name">Premium</h2>
+                            <ul class="price_services">
+                                <li>* Фотозйомка весілля від 09:00 до ранку</li>
+                                <li>* Консультація та обговорення таймінгу свята  </li>
+                                <li>* Зйомка LoveStory до весілля</li>
+                                <li>* Післявесільна фотосесія</li>
+                                <li>* Ретуш 50-ти фото для соцмереж </li>
+                                <li>* 40 друкованих фотографій  розміром 15*20 
+                                    в дизайнерській коробці</li>
+                                <li>* від 1000 оброблених цифрових фото 
+                                    на дизайнерській флешці</li>
+                                <li>* Фотокнига розміром 40*30,  
+                                    20 розворотів та дві міні-версії для
+                                    батьків розміром 21*15</li>
+                                <li>* Велике фото на холсті (портрет)</li>
+                            </ul>
+                        </div>
+                        <div class="price_info">
+                            <p class="work_term">Термін роботи 2 місяці</p>
+                            <p class="price_value">600$</p>
+                            <button class="details_button">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="prices" id="lovestory">
+                    <div class="price">
+                        <div class="price_text">
+                            <h2 class="price_name">Classic</h2>
+                            <ul class="price_services">
+                                <li>* Фотозйомка LoveStory 1-1.5 год</li>
+                                <li>* Консультація щодо фотосесії</li>
+                                <li>* Отримаєте 5 обролених фото в день фотосесії </li>
+                                <li>* 5 друкованих фотографій розміром 15*20 
+                                    в дизайнерському конверті</li>
+                                <li>* від 100 оброблених цифрових фото 
+                                    </li>
+                            </ul>
+                        </div>
+                        <div class="price_info">
+                            <p class="work_term">* Всі фото відправлю Вам через інтернет-сервіси, термін роботи 10 днів</p>
+                            <p class="price_value">1200 грн</p>
+                            <button class="details_button">Детальніше</button>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="price_text">
+                            <h2 class="price_name">Standart</h2>
+                            <ul class="price_services">
+                                <li>* Фотозйомка LoveStory 2-2.5 год</li>
+                                <li>* Консультація щодо фотосесії</li>
+                                <li>* Отримаєте 10 обролених фото в день фотосесії </li>
+                                <li>*  10 друкованих фотографій розміром 15*20 
+                                    в дизайнерському конверті</li>
+                                <li>* від 200 оброблених цифрових фото</li>
+                            </ul>
+                        </div>
+                        <div class="price_info">
+                            <p class="work_term">* Всі фото відправлю Вам через інтернет-сервіси, термін роботи 15 днів</p>
+                            <p class="price_value">2000 грн</p>
+                            <button class="details_button">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="prices school" id="school_types">
+                    <div class="school_type" id="prom_photo_price">
+                        <div class="price">
+                            <div class="price_text">
+                                <h2 class="price_name">Classic</h2>
+                                <ul class="price_services">
+                                    <li>* Фотозйомка урочистої частини 
+                                        (репортажні фото вручення атестатів, вальсу 
+                                        і т.д) та післяурочиста фотосесія (персональні
+                                        фото кожного випускника, фото з батьками,
+                                        друзями, вчителями, групами, та кілька загальних
+                                        фото), тривалість 2-2,5 год.</li>
+                                    <li>* Ретуш 10-ти фото для соцмереж в день випускного</li>
+                                    <li>* 150-200 оброблених цифрових фото</li>
+                                    <li>* 3 друкованих фото розміром 15*20 у крафтовому конверті</li>
+                                </ul>
+                            </div>
+                            <div class="price_info">
+                                <p class="work_term">* Всі фото відправляю Вам через інтернет-сервіси, термін роботи 30 днів.</p>
+                                <p class="work_term">Мінімальна оплата 1500 грн (на той випадок, коли учнів менше 10)</p>
+                                <p class="price_value">150 грн з 1 випускника</p>
+                                <button class="details_button">Детальніше</button>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div class="price_text">
+                                <h2 class="price_name">Standart</h2>
+                                <ul class="price_services">
+                                    <li>* Фотозйомка урочистої частини 
+                                        (репортажні фото вручення атестатів, вальсу і
+                                        т.д) та післяурочиста фотосесія (персональні 
+                                        фото кожного випускника, фото з батьками, 
+                                        друзями, вчителями, групами, та кілька загальних
+                                        фото), фотозйомка банкету до 22:00, тривалість 
+                                        5-6 год.</li>
+                                    <li>* Ретуш 20-ти фото для соцмереж в день випускного</li>
+                                    <li>* 300-350 оброблених цифрових фото</li>
+                                    <li>* 6 друкованих фото розміром 15*20 у крафтовому конверті</li>
+                                </ul>
+                            </div>
+                            <div class="price_info">
+                                <p class="work_term">* Всі фото відправляю Вам через інтернет-сервіси, термін роботи 30 днів</p>
+                                <p class="work_term">Мінімальна оплата 3000 грн (на той випадок, коли учнів менше 10)</p>
+                                <p class="price_value">300 грн з 1 випускника</p>
+                                <button class="details_button">Детальніше</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="school_type" id="school_photo_price">
+                        <div class="price">
+                            <div class="price_text">
+                                <h2 class="price_name">Classic</h2>
+                                <ul class="price_services">
+                                    <li>* Фотозйомка урочистої частини (репортажні фото) та 
+                                        післяурочиста фотосесія (персональні фото кожного учня, 
+                                        фото з батьками, друзями, вчителями, групами, та кілька
+                                        загальних фото).</li>
+                                    <li>* Ретуш 5-ти загальних фото для соцмереж в день урочистості.</li>
+                                    <li>* 3 друкованих фото розміром 15*20 у крафтовому конверті</li>
+                                </ul>
+                            </div>
+                            <div class="price_info">
+                                <p class="work_term">* Всі фото відправляю Вам через інтернет-сервіси, термін роботи 30 днів.</p>
+                                <p class="work_term">Мінімальна оплата 1500 грн (на той випадок, коли учнів менше 10)</p>
+                                <p class="price_value">150 грн з 1 учня</p>
+                                <button class="details_button">Детальніше</button>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div class="price_text">
+                                <h2 class="price_name">Standart</h2>
+                                <ul class="price_services">
+                                    <li>* Фотозйомка урочистої частини (репортажні фото) та 
+                                        післяурочиста фотосесія (персональні фото кожного учня, 
+                                        фото з батьками, друзями, вчителями, групами, та 
+                                        кілька загальних фото).</li>
+                                    <li>* Ретуш 5-ти загальних фото для соцмереж в день урочистості.</li>
+                                    <li>* 3 друкованих фото розміром 15*20 у крафтовому конверті</li>
+                                    <li>* Фотокнига розміром 20*30 см, тверда фотообкладинка, 4 тверді розвороти</li>
+                                </ul>
+                            </div>
+                            <div class="price_info">
+                                <p class="work_term">* Всі фото відправляю Вам через інтернет-сервіси, термін роботи 30 днів.</p>
+                                <p class="work_term">Мінімальна оплата за фотосесію 1500 грн (на той випадок, коли учнів менше 10)</p>
+                                <p class="work_term">Мінімальна оплата за фотокниги 800 грн (на той випадок, коли учнів менше 10)</p>
+                                <p class="price_value">150 грн + 200 грн з 1 учня</p>
+                                <button class="details_button">Детальніше</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="school_type" id="first_photo_price">
+                        <div class="price">
+                            <div class="price_text">
+                                <h2 class="price_name">Classic</h2>
+                                <ul class="price_services">
+                                    <li>* Фотозйомка літургії (репортажні фото) та післялітургійна фотосесія 
+                                        (персональні фото кожного причасника, фото з батьками, з хресними батьками, 
+                                        рідними, групами, та кілька загальних фото).</li>
+                                    <li>* Ретуш 5-ти загальних фото для соцмереж в день причастя. (загальні фото)</li>
+                                    <li>* 3 друкованих фото розміром 15*20 у крафтовому конверті (кожному).</li>
+                                </ul>
+                            </div>
+                            <div class="price_info">
+                                <p class="work_term">* Всі фото відправляю Вам через інтернет-сервіси, термін роботи 30 днів.</p>
+                                <p class="work_term">Мінімальна оплата 1500 грн (на той випадок, коли причасників менше 10)</p>
+                                <p class="price_value">150 грн з 1 причасника</p>
+                                <button class="details_button">Детальніше</button>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div class="price_text">
+                                <h2 class="price_name">Standart</h2>
+                                <ul class="price_services">
+                                    <li>* Фотозйомка літургії (репортажні фото) та післялітургійна фотосесія 
+                                        (персональні фото кожного причасника, фото з батьками, з хресними батьками, 
+                                        рідними, групами, та кілька загальних фото).</li>
+                                    <li>* Ретуш 5-ти загальних фото для соцмереж в день причастя. (загальні фото)</li>
+                                    <li>* 3 друкованих фото розміром 15*20 у крафтовому конверті (кожному).</li>
+                                    <li>* Фотокнига розміром 20*30 см, тверда фотообкладинка, 4 тверді розвороти</li>
+                                </ul>
+                            </div>
+                            <div class="price_info">
+                                <p class="work_term">* Всі фото відправляю Вам через інтернет-сервіси, термін роботи 30 днів.</p>
+                                <p class="work_term">Мінімальна оплата за фотосесію 1500 грн (на той випадок, коли причасників менше 10)</p>
+                                <p class="work_term">Мінімальна оплата за 4 фотокниги – 800 грн (на той випадок, коли фотокнигу замовляють менше 4 причасника)</p>
+                                <p class="price_value">150 грн + 200 грн з 1 причасника</p>
+                                <button class="details_button">Детальніше</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prices" id="birthday">
+                    <div class="price">
+                        <div class="price_text">
+                            <h2 class="price_name">Classic</h2>
+                            <ul class="price_services">
+                                <li>* Фотозйомка 1-1.5 год</li>
+                                <li>* Консультація щодо фотосесії</li>
+                                <li>* Ретуш 5-ти фото для соцмереж того ж дня</li>
+                                <li>* 5 друкованих фотографій розміром 15*20 в дизайнерському конверті</li>
+                                <li>* 100-150 оброблених цифрових фото
+                                    </li>
+                            </ul>
+                        </div>
+                        <div class="price_info">
+                            <p class="work_term">* Всі фото відправляю Вам через інтернет-сервіси, термін роботи 10 днів</p>
+                            <p class="price_value">1200 грн</p>
+                            <button class="details_button">Детальніше</button>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="price_text">
+                            <h2 class="price_name">Standart</h2>
+                            <ul class="price_services">
+                                <li>* Фотозйомка 2-2,5 год</li>
+                                <li>* Консультація щодо фотосесії</li>
+                                <li>* Ретуш 10-ти фото для соцмереж того ж дня</li>
+                                <li>* 10 друкованих фотографій розміром 15*20 в дизайнерському конверті</li>
+                                <li>* 200-250 оброблених цифрових фото</li>
+                            </ul>
+                        </div>
+                        <div class="price_info">
+                            <p class="work_term">* Всі фото відправляю Вам через інтернет-сервіси, термін роботи 15 днів </p>
+                            <p class="price_value">2000 грн</p>
+                            <button class="details_button">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="prices" id="vignette">
+                    <div class="price">
+                        <div class="price_text">
+                            <h2 class="price_name">Classic</h2>
+                            <ul class="price_services">
+                                <li>* 1 фотосесія</li>
+                                <li>* Консультація та обговорення стилю фотосесії</li>
+                                <li>* Корекція всіх фотографій протягом 2-х тижнів</li>
+                                <li>* Цифрові фотографії отримуєте на DVD диску</li>
+                                <li>* Друк вінєтки на вибір:
+                                    </li>
+                                <li>1) Розміром 20*30 (тверда фотообкладинка, тверді сторінки, 4 розвороти)</li>
+                                <li>2) Розміром 20*30 (тверда фотообкладинка, м’які сторінки, 16 сторінок (8 розворотів))</li>
+                                <li>Можливий розмір вінєтки: 20*20, 20*30, 30*20, 30*30</li>
+                            </ul>
+                        </div>
+                        <div class="price_info">
+                            <p class="work_term">Термін роботи 1,5 місяці</p>
+                            <p class="work_term">Є можливість замовити додаткові фотосесії. Вартість рахується окремо.</p>
+                            <p class="work_term">+ Подарунок – фотокнига для класного керівника та друковане фото 20*30 для пам’ятки в навчальний заклад.</p>
+                            <p class="price_value">350 грн</p>
+                            <button class="details_button">Детальніше</button>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="price_text">
+                            <h2 class="price_name">Standart</h2>
+                            <ul class="price_services">
+                                <li>* 3 фотосесії</li>
+                                <li>* Консультація та обговорення стилів фотосесії</li>
+                                <li>* Корекція всіх фотографій протягом 2-х тижнів після кожної зйомки</li>
+                                <li>* Цифрові фотографії отримуєте на DVD диску</li>
+                                <li>* Друк вінєтки на вибір:
+                                    </li>
+                                <li>1) Розміром 20*30 (тверда фотообкладинка, тверді сторінки, 8 розворотів)</li>
+                                <li>2) Розміром 20*30 (тверда фотообкладинка, м’які сторінки, 32 сторінок (16 розворотів))</li>
+                                <li>Можливий розмір вінєтки: 20*20, 20*30, 30*20, 30*30</li>
+                            </ul>
+                        </div>
+                        <div class="price_info">
+                            <p class="work_term">Термін роботи 2 місяці</p>
+                            <p class="work_term">Є можливість замовити додаткові фотосесії. Вартість рахується окремо.</p>
+                            <p class="work_term">+ Подарунок – фотокнига для класного керівника та друковане фото 20*30 для пам’ятки в навчальний заклад.</p>
+                            <p class="price_value">600 грн</p>
+                            <button class="details_button">Детальніше</button>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="price_text">
+                            <h2 class="price_name">Premium</h2>
+                            <ul class="price_services">
+                                <li>* 5 фотосесій</li>
+                                <li>* Консультація та обговорення стилів фотосесії</li>
+                                <li>* Корекція всіх фотографій протягом 2-х тижнів після кожної зйомки</li>
+                                <li>* Цифрові фотографії отримуєте на DVD диску</li>
+                                <li>* Друк вінєтки на вибір:
+                                    </li>
+                                <li>1) Розміром 30*30 (тверда фотообкладинка, тверді сторінки, 12 розворотів)</li>
+                                <li>2) Розміром 30*30 (тверда фотообкладинка, м’які сторінки, 48 сторінок (24 розвороти))</li>
+                                <li>Можливий розмір вінєтки: 20*20, 20*30, 30*20, 30*30</li>
+                            </ul>
+                        </div>
+                        <div class="price_info">
+                            <p class="work_term">Термін роботи 2 місяці</p>
+                            <p class="work_term">Є можливість замовити додаткові фотосесії. Вартість рахується окремо.</p>
+                            <p class="work_term">+ Подарунок – фотокнига для класного керівника та друковане фото 20*30 для пам’ятки в навчальний заклад.</p>
+                            <p class="price_value">800 грн</p>
+                            <button class="details_button">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="prices" id="individual">
+                    <div class="price">
+                        <div class="price_text">
+                            <h2 class="price_name">Classic</h2>
+                            <ul class="price_services">
+                                <li>* Фотозйомка 1-1.5 год</li>
+                                <li>* Консультація щодо фотосесії</li>
+                                <li>* Ретуш 5-ти фото для соцмереж того ж дня</li>
+                                <li>* 5 друкованих фотографій розміром 15*20 в дизайнерському конверті</li>
+                                <li>* від 100 оброблених цифрових фото
+                                    </li>
+                            </ul>
+                        </div>
+                        <div class="price_info">
+                            <p class="work_term">* Всі фото відправляю Вам через інтернет-сервіси, термін роботи 10 днів </p>
+                            <p class="price_value">1200 грн</p>
+                            <button class="details_button">Детальніше</button>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <div class="price_text">
+                            <h2 class="price_name">Standart</h2>
+                            <ul class="price_services">
+                                <li>* Фотозйомка 2-2,5 год</li>
+                                <li>* Консультація щодо фотосесії</li>
+                                <li>* Ретуш 10-ти фото для соцмереж того ж дня </li>
+                                <li>* 10 друкованих фотографій розміром 15*20 в дизайнерському конверті</li>
+                                <li>* від 200 оброблених цифрових фото</li>
+                            </ul>
+                        </div>
+                        <div class="price_info">
+                            <p class="work_term">* Всі фото відправляю Вам через інтернет-сервіси, термін роботи 15 днів </p>
+                            <p class="price_value">2000 грн</p>
+                            <button class="details_button">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container container_footer">
+            <div class="photographer_info">
+                <h3 class="message">Художник, що малює мить 2022</h3>
+                <p class="email"><b>Email:</b> klyukai.nazarko@gmail.com</p>
+                <p class="phone_num"><b>Телефон:</b> +380973292182</p>
+            </div>
+            <div class="photographer_icon">
+                <img src="images/head_logo.png" class="logo" alt="">
+            </div>
+            <div class="photographer_contacts">
+                <h3 class="social_headline">Соціальні мережі</h3>
+                <div class="social_icons">
+                    <div class="icon"><img src="images/facebook_icon2.png" alt=""></div>
+                    <div class="icon"><img src="images/instagram2_icon.png" alt=""></div>
+                    <div class="icon"><img src="images/youtube2_icon.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script2.js"></script>
+</body>
+</html>
