@@ -5,11 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style_portfolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" 
+   integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" 
+   crossorigin="anonymous">
+    </script>
+    <script src="js/lc_lightbox.lite.js"></script>
+    <link rel="stylesheet" href="css/lc_lightbox.css">
+
+    <link rel="stylesheet" href="skins/dark.css">
+
+
+    <link rel="stylesheet" href="skins/light.css">
+
+
+    <link rel="stylesheet" href="skins/minimal.css">
+    <script src="lib/AlloyFinger/alloy_finger.min.js"></script>
+    <script src="lib/jquery.js" type="text/javascript"></script>
  </head>
  <body>
      <header>
@@ -50,6 +65,9 @@
          </div>
      </header>
     <main>
+        
+        <div class="header_icon" id="header_icon" onclick="openHeader()"><img src="images/header_menu.png" alt=""></div>
+        
         <div class="container container_4">
             <div class="portfolio_block">
                 <h1 class="headline">Портфоліо</h1>
@@ -70,119 +88,577 @@
                 <div class="portfolio_galleries">
                     <div class="photo_gallery wedding" id="wedding">
                         <div class="photos row1">
-                            <div class="photo one"><img src="images/wedding_photos/фотограф-на-весілля-Чортків-1.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/wedding_photos/фотограф-на-весілля-Борщів.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/wedding_photos/фотограф-на-весілля-Чортків-1.jpg" 
+                                    title="image 1" 
+                                    data-lcl-txt="Description 1" 
+                                    data-lcl-author="Author 1" 
+                                    data-lcl-thumb="thumb1.jpg">
+                                    <img src="images/wedding_photos/фотограф-на-весілля-Чортків-1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/wedding_photos/фотограф-на-весілля-Борщів.jpg" 
+                                    title="image 2" 
+                                    data-lcl-txt="Description 2" 
+                                    data-lcl-author="Author 2" 
+                                    data-lcl-thumb="thumb2.jpg">
+                                    <img src="images/wedding_photos/фотограф-на-весілля-Борщів.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="photos row2">
-                            <div class="photo one"><img src="images/wedding_photos/фотограф-вінчання.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/wedding_photos/фотограф-весільний.jpg" alt=""></div>
-                            <div class="photo three"><img src="images/wedding_photos/фотограф-Борщів.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/wedding_photos/фотограф-вінчання.jpg" 
+                                    title="image 3" 
+                                    data-lcl-txt="Description 3" 
+                                    data-lcl-author="Author 3" 
+                                    data-lcl-thumb="thumb3.jpg">
+                                    <img src="images/wedding_photos/фотограф-вінчання.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/wedding_photos/фотограф-весільний.jpg" 
+                                    title="image 4" 
+                                    data-lcl-txt="Description 4" 
+                                    data-lcl-author="Author 4" 
+                                    data-lcl-thumb="thumb2.jpg">
+                                    <img src="images/wedding_photos/фотограф-весільний.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo three">
+                                <a class="elem" 
+                                    href="images/wedding_photos/фотограф-Борщів.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/wedding_photos/фотограф-Борщів.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="photos row3">
-                            <div class="photo one"><img src="images/wedding_photos/фотограф-бенкет.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/wedding_photos/фото-весілля-Чортків-2.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/wedding_photos/фотограф-бенкет.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/wedding_photos/фотограф-бенкет.jpg" alt="">
+                                </a>
+                                
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/wedding_photos/фото-весілля-Чортків-2.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/wedding_photos/фото-весілля-Чортків-2.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="photos row4">
-                            <div class="photo one"><img src="images/wedding_photos/фото-біля-фотозони.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/wedding_photos/фотограф-Тернопіль (1).jpg" alt=""></div>
-                            <div class="photo three"><img src="images/wedding_photos/фото-весілля-Тернопіль-01.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/wedding_photos/фото-біля-фотозони.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/wedding_photos/фото-біля-фотозони.jpg" alt="">
+                                </a>
+                                
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/wedding_photos/фотограф-Тернопіль (1).jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/wedding_photos/фотограф-Тернопіль (1).jpg" alt="">
+                                </a>
+                                
+                            </div>
+                            <div class="photo three">
+                                <a class="elem" 
+                                    href="images/wedding_photos/фото-весілля-Тернопіль-01.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/wedding_photos/фото-весілля-Тернопіль-01.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="photos row5">
-                            <div class="photo one"><img src="images/wedding_photos/весільна-фотозона-Чортків.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/wedding_photos/весільна-фотозона-Чортків.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/wedding_photos/весільна-фотозона-Чортків.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="photo_gallery lovestory" id="lovestory">
                         <div class="photos row1">
-                            <div class="photo one"><img src="images/lovestory_photos/фотограф-на-весілля-Чортків.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/lovestory_photos/фотограф-весілля.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/фотограф-на-весілля-Чортків.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/фотограф-на-весілля-Чортків.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/фотограф-весілля.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/фотограф-весілля.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="photos row2">
-                            <div class="photo one"><img src="images/lovestory_photos/фото-на-весілля-Чортків.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/lovestory_photos/фото-весілля-Чортків.jpg" alt=""></div>
-                            <!-- <div class="photo three"></div> -->
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/фото-на-весілля-Чортків.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/фото-на-весілля-Чортків.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/фото-весілля-Чортків.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/фото-весілля-Чортків.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="photos row3">
-                            <div class="photo one"><img src="images/lovestory_photos/весільний-Чортків.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/lovestory_photos/весільний-фотограф-Чортків.jpg" alt=""></div>
-                            <div class="photo three"><img src="images/lovestory_photos/весільний-декор.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/весільний-Чортків.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/весільний-Чортків.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/весільний-фотограф-Чортків.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/весільний-фотограф-Чортків.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo three">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/весільний-декор.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/весільний-декор.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="photos row4">
-                            <div class="photo one"><img src="images/lovestory_photos/весільний-костюм.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/lovestory_photos/весільне-плаття-фото.jpg" alt=""></div>
-                            <div class="photo three"><img src="images/lovestory_photos/весільна-шубка.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/весільний-костюм.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/весільний-костюм.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/весільне-плаття-фото.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/весільне-плаття-фото.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo three">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/весільна-шубка.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/весільна-шубка.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="photos row5">
-                            <div class="photo one"><img src="images/lovestory_photos/весільна-прогулянка-Чортків.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/lovestory_photos/весілля-на-площі-Чортків.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/весільна-прогулянка-Чортків.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/весільна-прогулянка-Чортків.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/весілля-на-площі-Чортків.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/весілля-на-площі-Чортків.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="photos row6">
-                            <div class="photo one"><img src="images/lovestory_photos/весілля-площа-Чортків.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/lovestory_photos/весільне-плаття.jpg" alt=""></div>
-                            <div class="photo three"><img src="images/lovestory_photos/весільне-фото-2019.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/весілля-площа-Чортків.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/весілля-площа-Чортків.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/весільне-плаття.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/весільне-плаття.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo three">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/весільне-фото-2019.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/весільне-фото-2019.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="photos row7">
-                            <div class="photo one"><img src="images/lovestory_photos/букет-на-розпис-зима.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/lovestory_photos/Вікторія-та-Олег-розпис-фото.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/букет-на-розпис-зима.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/букет-на-розпис-зима.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/Вікторія-та-Олег-розпис-фото.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/Вікторія-та-Олег-розпис-фото.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="photos row8">
-                            <div class="photo one"><img src="images/lovestory_photos/зачіска-на-розпис-зима.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/lovestory_photos/зачіска-на-розпис.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/зачіска-на-розпис-зима.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/зачіска-на-розпис-зима.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/зачіска-на-розпис.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/зачіска-на-розпис.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="photos row9">
-                            <div class="photo one"><img src="images/lovestory_photos/Пан-чортківський-розпис-фото.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/lovestory_photos/фотограф-розпис-зимою.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/Пан-чортківський-розпис-фото.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/Пан-чортківський-розпис-фото.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/фотограф-розпис-зимою.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/фотограф-розпис-зимою.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="photos row10">
-                            <div class="photo one"><img src="images/lovestory_photos/фотограф-розпис-зима.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/lovestory_photos/фото-розпис-Чорктів.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/фотограф-розпис-зима.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/фотограф-розпис-зима.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/фото-розпис-Чорктів.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/фото-розпис-Чорктів.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="photos row11">
-                            <div class="photo one"><img src="images/lovestory_photos/фото-розпис-зимою.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/lovestory_photos/фото-рзпис-зима.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/фото-розпис-зимою.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/фото-розпис-зимою.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/фото-рзпис-зима.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/фото-рзпис-зима.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="photos row12">
-                            <div class="photo one"><img src="images/lovestory_photos/Чортків-розпис-3-січня.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/lovestory_photos/Чортків-розпис-3-січня.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/lovestory_photos/Чортків-розпис-3-січня.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="photo_gallery school" id="school">
                         <div class="photos row1">
-                            <div class="photo one"><img src="images/school_events_photos/фотограф-на-випускний-чортків.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/school_events_photos/фотограф-на-випускний-заліщики.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/school_events_photos/фотограф-на-випускний-чортків.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/school_events_photos/фотограф-на-випускний-чортків.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/school_events_photos/фотограф-на-випускний-заліщики.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/school_events_photos/фотограф-на-випускний-заліщики.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="photos row2">
-                            <div class="photo one"><img src="images/school_events_photos/фотограф-на-випускний-гусятин.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/school_events_photos/фотограф-на-випускний-борщів.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/school_events_photos/фотограф-на-випускний-гусятин.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/school_events_photos/фотограф-на-випускний-гусятин.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/school_events_photos/фотограф-на-випускний-борщів.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/school_events_photos/фотограф-на-випускний-борщів.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="photo_gallery birthday" id="birthday">
                         <div class="photos row1">
-                            <div class="photo one"><img src="images/birthday_photos/фотограф-день-народження-чортків.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/birthday_photos/фотограф-день-народження-заліщики.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/birthday_photos/фотограф-день-народження-чортків.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/birthday_photos/фотограф-день-народження-чортків.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/birthday_photos/фотограф-день-народження-заліщики.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/birthday_photos/фотограф-день-народження-заліщики.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="photos row2">
-                            <div class="photo one"><img src="images/birthday_photos/фотограф-день-народження-борщів (1).jpg" alt=""></div>
-                            <!-- <div class="photo four"></div> -->
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/birthday_photos/фотограф-день-народження-борщів (1).jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/birthday_photos/фотограф-день-народження-борщів (1).jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="photo_gallery vignette" id="vignette">
                         <div class="photos row1">
-                            <div class="photo one"><img src="images/vignette_photos/фотограф-вінєтка-чортків.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/vignette_photos/портретний-фотограф-заліщики.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/vignette_photos/фотограф-вінєтка-чортків.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/vignette_photos/фотограф-вінєтка-чортків.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/vignette_photos/портретний-фотограф-заліщики.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/vignette_photos/портретний-фотограф-заліщики.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="photos row2">
-                            <div class="photo one"><img src="images/vignette_photos/портретний-фотограф-тернопіль.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/vignette_photos/IMG_5498-1.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/vignette_photos/портретний-фотограф-тернопіль.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/vignette_photos/портретний-фотограф-тернопіль.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/vignette_photos/IMG_5498-1.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/vignette_photos/IMG_5498-1.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="photo_gallery individual" id="individual">
                         <div class="photos row1">
-                            <div class="photo one"><img src="images/individual_photos/портретний-фотограф-чортків.jpg" alt=""></div>
-                            <div class="photo two"><img src="images/individual_photos/портретний-фотограф-тернопіль.jpg" alt=""></div>
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/individual_photos/портретний-фотограф-чортків.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/individual_photos/портретний-фотограф-чортків.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="photo two">
+                                <a class="elem" 
+                                    href="images/individual_photos/портретний-фотограф-тернопіль.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/individual_photos/портретний-фотограф-тернопіль.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="photos row2">
-                            <div class="photo one"><img src="images/individual_photos/портретний-фотограф-заліщики.jpg" alt=""></div>
-                            <!-- <div class="photo four"></div>
-                            <div class="photo five"></div> -->
+                            <div class="photo one">
+                                <a class="elem" 
+                                    href="images/individual_photos/портретний-фотограф-заліщики.jpg" 
+                                    title="image 5" 
+                                    data-lcl-txt="Description 5" 
+                                    data-lcl-author="Author 5" 
+                                    data-lcl-thumb="thumb5.jpg">
+                                    <img src="images/individual_photos/портретний-фотограф-заліщики.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -193,16 +669,13 @@
                 <h1 class="headline">Додаткові послуги</h1>
                 <div class="additional_services">
                     <div class="additional_service printed_photos">
-                        <!-- <img src="images/printed_photos_grey.png" alt=""> -->
-                        <!--<div class="service_name">--><h3><a href="prices_count.html">ДРУК ФОТО</a></h3><!--</div>-->
+                        <h3><a href="prices_count.html">ДРУК ФОТО</a></h3>
                     </div>
                     <div class="additional_service wedding_photobook">
-                        <!-- <img src="images/wedding_photobook_grey.png" alt=""> -->
-                        <!--<div class="service_name">--><h3><a href="photobooks.html">ФОТОКНИГИ</a></h3><!--</div>-->
+                        <h3><a href="photobooks.html">ФОТОКНИГИ</a></h3>
                     </div>
                     <div class="additional_service photo_packaging">
-                        <!-- <img src="images/photo_packaging_grey.png" alt=""> -->
-                        <!--<div class="service_name">--><h3><a href="graduation_photobooks.html">ПАКУВАННЯ</a></h3><!--</div>-->
+                        <h3><a href="graduation_photobooks.html">ПАКУВАННЯ</a></h3>
                     </div>
                 </div>
             </div>
@@ -229,5 +702,214 @@
         </div>
     </footer>
     <script src="js/script_portfolio.js"></script>
+    <script>
+                    $(document).ready(function(e) {
+            lc_lightbox('.elem', {
+                wrap_class: 'lcl_fade_oc',
+                gallery : true, 
+                thumb_attr: 'data-lcl-thumb', 
+                skin: 'dark',
+                // more options here
+                }); 
+                lc_lightbox('.elem', {
+
+// whether to display a single element or compose a gallery
+gallery     : true, 
+
+// attribute grouping elements - use false to create a gallery with all fetched elements 
+gallery_hook  : 'rel', 
+
+// if a selector is found, set true to handle automatically DOM changes
+live_elements : true, 
+
+// whether to preload all images on document ready
+preload_all   : false, 
+
+// force elements type
+global_type   : 'image', 
+
+// attribute containing element's source
+src_attr    : 'href', 
+
+// attribute containing the title - is possible to specify a selector with this syntax: "> .selector" or "> span" 
+title_attr    : 'title', 
+
+// attribute containing the description - is possible to specify a selector with this syntax: "> .selector" or "> span" 
+txt_attr    : 'data-lcl-txt', 
+
+// attribute containing the author - is possible to specify a selector with this syntax: "> .selector" or "> span" 
+author_attr   : 'data-lcl-author', 
+
+// whether to enable slideshow
+slideshow   : true, 
+
+// animation duration for lightbox opening and closing / 1000 = 1sec
+open_close_time : 500, 
+
+// overlay's animation advance (on opening) and delay (on close) to window / 1000 = sec
+ol_time_diff  : 100, 
+
+// elements fading animation duration in millisecods / 1000 = 1sec
+fading_time   : 150, 
+
+// sizing animation duration in millisecods / 1000 = 1sec
+animation_time  : 300, 
+
+// slideshow interval duration in milliseconds / 1000 = 1sec
+slideshow_time  : 6000, 
+
+// autoplay slideshow - bool
+autoplay    : false, 
+
+// whether to display elements counter
+counter     : false, 
+
+// whether to display a progressbar when slideshow runs
+progressbar   : true, 
+
+// whether to create a non-stop pagination cycling elements
+carousel    : true, 
+
+// Lightbox maximum width. 
+// Use a responsive percent value or an integer for static pixel value
+max_width   : '93%', 
+
+// Lightbox maximum height. 
+// Use a responsive percent value or an integer for static pixel value
+max_height    : '93%', 
+
+// overlay opacity / value between 0 and 1
+ol_opacity    : 0.7, 
+
+// background color of the overlay
+ol_color    : '#111', 
+
+// overlay patterns - insert the pattern name or false
+ol_pattern    : false, 
+
+// width of the lightbox border in pixels 
+border_w    : 3, 
+
+// color of the lightbox border
+border_col    : '#ddd', 
+
+// width of the lightbox padding in pixels
+padding     : 10, 
+
+// lightbox border radius in pixels 
+radius      : 4, 
+
+// whether to apply a shadow around lightbox window
+shadow      : true, 
+
+// whether to hide page's vertical scroller
+remove_scrollbar: true, 
+
+// custom classes added to wrapper - for custom styling/tracking
+wrap_class    : '', 
+
+// light / dark / Minimal
+skin      : 'light', 
+
+// over / under / lside / rside
+data_position : 'over', 
+
+// inner / outer
+cmd_position  : 'inner',  
+
+// set closing button position for inner commands - normal/corner 
+ins_close_pos : 'normal', 
+
+// set arrows and play/pause position - normal/middle
+nav_btn_pos   : 'normal', 
+
+// whether to hide texts on lightbox opening - bool or int (related to browser's smaller side)
+txt_hidden    : 500, 
+
+// bool / whether to display titles
+show_title    : true, 
+
+// bool / whether to display descriptions
+show_descr    : true, 
+
+// bool / whether to display authors
+show_author   : true, 
+
+// enables thumbnails navigation (requires elements poster or images)
+thumbs_nav    : true, 
+
+// print type icons on thumbs if types are mixed
+tn_icons    : true, 
+
+// whether to hide thumbs nav on lightbox opening - bool or int (related to browser's smaller side)
+tn_hidden   : 500, 
+
+// width of the thumbs for the standard lightbox
+thumbs_w    : 110, 
+
+// height of the thumbs for the standard lightbox
+thumbs_h    : 110, 
+
+// attribute containing thumb URL to use or false to use thumbs maker
+thumb_attr    : false, 
+
+// script baseurl to create thumbnails (use src=%URL% w=%W% h=%H%)
+thumbs_maker_url: false, 
+
+// Allow the user to expand a resized image. true/false
+fullscreen    : true, 
+
+// resize mode of the fullscreen image - smart/fit/fill
+fs_img_behavior : 'fit', 
+
+// when directly open in fullscreen mode - bool or int (related to browser's smaller side)
+fs_only     : 500, 
+
+// whether to trigger or nor browser fullscreen mode
+browser_fs_mode : true, 
+
+// bool
+socials     : true, 
+
+// use a specific string representing URL parameters + placeholders (they will be replaced by the lightbox)
+// it requires a server-side script handling those parameters and filling the page with <a href="https://www.jqueryscript.net/tags.php?/Facebook/">Facebook</a> Metadata.
+// a usage example could be: app_id=YOUR-APP-ID&redirect_uri=THE-REDIRECT-URI&lcsism_img=%IMG%&lcsism_title=%TITLE%&lcsism_descr=%DESCR%
+// the lightbox will replace %IMG% %TITLE% and %DESCR%
+fb_share_params : false,
+
+// bool / allow text hiding
+txt_toggle_cmd  : true, 
+
+// bool / whether to add download button
+download    : true, 
+
+// bool / Allow touch interactions for mobile (requires AlloyFinger)
+touchswipe    : true, 
+
+// bool / Allow elements navigation with mousewheel
+mousewheel    : true, 
+
+// enable modal mode (no closing on overlay click)
+modal     : false, 
+
+// whether to avoid right click on lightbox
+rclick_prevent  : false
+
+});  
+lc_lightbox('.elem', {
+
+elems_parsed  : function() {},
+html_is_ready   : function() {},
+on_open     : function() {},
+on_elem_switch  : function() {},
+slideshow_start : function() {},
+slideshow_end : function() {},
+on_fs_enter   : function() {},
+on_fs_exit    : function() {},
+on_close    : function() {},
+
+}); 
+            })
+    </script>
 </body>
 </html>

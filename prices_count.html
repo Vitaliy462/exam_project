@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prices Count page</title>
-    <link rel="stylesheet" href="css/style4.css">
+    <link rel="stylesheet" href="css/style_prices_count.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -46,6 +47,9 @@
         </div>
     </header>
     <main>
+        
+        <div class="header_icon" id="header_icon" onclick="openHeader()"><img src="images/header_menu.png" alt=""></div>
+
         <div class="container container_count_price">
             <h1 class="headline">Розрахунок вартості</h1>
             <div class="count_prices_block">
@@ -54,7 +58,6 @@
                     <p>Вартість одного фото:</p>    
                     <form action="">
                         <label for="">Виберіть розмір фото:</label>
-                        <!-- <input type="text"> -->
                         <select name="photo_size" id="photo_size">
                             <option value="9">9*13</option>
                             <option value="10">10*13</option>
@@ -91,6 +94,22 @@
                 </div>
             </div>
         </div>
+        <div class="container container_5">
+            <div class="additional_services_block">
+                <h1 class="headline">Додаткові послуги</h1>
+                <div class="additional_services">
+                    <div class="additional_service wedding_photobooks">
+                        <h3><a href="prices_count.html">ДРУК ФОТО</a></h3>
+                    </div>
+                    <div class="additional_service classic_photobooks">
+                        <h3><a href="photobooks.html">ФОТОКНИГИ</a></h3>
+                    </div>
+                    <div class="additional_service graduation_photobooks">
+                        <h3><a href="packaging_photobooks.html">ПАКУВАННЯ</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="container container_footer">
@@ -113,6 +132,6 @@
         </div>
     </footer>
 
-    <script src="js/script1.js"></script>
+    <script src="js/script_prices_count.js"></script>
 </body>
 </html>

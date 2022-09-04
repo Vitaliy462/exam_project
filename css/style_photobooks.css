@@ -15,19 +15,28 @@ li{
 
 .container
 {
-    /* max-width: 1600px; */
     max-width: 1200px;
     margin: 0 auto;
-    /* outline: 1px solid red; */
     font-family: 'Raleway', sans-serif;
 }
 
 main .container{
-    
-    /* padding:150px 0 300px; */
+    padding:125px 0;
+}
+
+.header_icon{
+    display: block;
+    position: static;
+    cursor: pointer;
+}  
+
+header.selected{
+    display: block;
 }
 
 header{
+    display: none;
+    position: static;
     background: #D0D0D0;
 }
 
@@ -40,7 +49,6 @@ header{
 }
 
 .container_head{
-    /* flex-direction: row; */
     justify-content: space-between;
 }
 
@@ -50,7 +58,6 @@ header{
 }
 
 .navigation ul{
-    /* font-size: 18px; */
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 400;
@@ -67,19 +74,13 @@ header{
     width: 145px;
     height: 155px;
     overflow: hidden;
-    /* outline: 1px solid black; */
 }
 
 .logo_block .logo img{
     display: block;
     width: 100%;
-    height: 100%;
 }
 
-/* .logo_block .logo img:hover{
-    width: 175px;
-    height: 185px;
-} */
 
 .logo_block h2{
     font-size: 25px;
@@ -88,8 +89,6 @@ header{
 .contacts_block
 {
     width: 115px;
-    /* outline: 1px solid black; */
-    /* gap:15px; */
     display: flex;
     justify-content: space-between;
 }
@@ -98,8 +97,6 @@ header{
 {
     display: block;
     background-color: #fff;
-    /* width: 40px;
-    height: 40px; */
     width: 25px;
     height: 25px;
     transition: .5s;
@@ -116,7 +113,6 @@ header{
 .photobook_text{
     width: 100%;
     height: 100%;
-    /* padding:300px 0; */
     background-image: url(../images/photobook.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -139,79 +135,6 @@ header{
     margin-bottom: 50px;
 }
 
-/* .container_5{
-}
-
-.additional_services_block .headline{
-    text-align: center;
-}
-
-.additional_services{
-    padding:145px 0 75px;
-    display: flex;
-    gap: 75px;
-}
-
-.additional_service.wedding_photobooks{
-    background-image: url(../images/wedding_photobook1.jpg);
-}
-
-.additional_service.classic_photobooks{
-    background-image: url(../images/classic_photobook.jpg);
-}
-
-.additional_service.graduation_photobooks{
-    background-image: url(../images/graduation_photobook.jpg);
-}
-
-.additional_service{
-    width: 365px;
-    position: relative;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 10px;
-    background-repeat:no-repeat ;
-    background-size: cover;
-}
-
-.additional_service img{
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.additional_service .service_name{
-    padding:93px 50px;
-}
-
-
-.additional_service .service_img_block{
-    padding:31px 32px;
-    background-color: #E0E4FD;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px 10px 0px 0px;
-}
-
-.additional_service .service_img_block .service_img{
-    display: block;
-    width: 300px;
-    height: 200px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 10px;
-}
-
-.additional_service .service_name{
-    font-weight: 200;
-    font-size: 18px;
-    color: #ffffff;
-    text-align: center;
-    cursor:pointer
-} */
-
-.container_5{
-    /* margin:75px auto 85px; */
-    /* outline: 1px solid green; */
-}
-
 .additional_services_block .headline{
     text-align: center;
 }
@@ -219,23 +142,15 @@ header{
 .additional_services{
     padding:145px 0 75px;
     gap:50px;
-    /* display: flex;
-    justify-content: space-between; */
     display: grid;
-    /* grid-template-columns: repeat(3,1fr); */
 }
 
 .additional_service{
     max-width: 365px;
-    /* position: relative; */
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     background-repeat: no-repeat;
     background-size:cover;
-    /* padding:85px 0px; */
 }
 
 .additional_service.wedding_photobooks{
@@ -251,21 +166,6 @@ header{
     background-image: url(../images/graduation_photobook.jpg);
 }
 
-
-/* .additional_service img{
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.additional_service .service_name{
-    position: absolute;
-    top: 43%;
-    left: 35%;
-} */
-
-
-
 .additional_service .service_img_block{
     padding:31px 32px;
     background-color: #E0E4FD;
@@ -275,32 +175,30 @@ header{
 
 .additional_service .service_img_block .service_img{
     display: block;
-    /* width: 455px; */
     width: 300px;
-    /* height: 255px; */
     height: 200px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
 }
 
 .additional_service .service_name{
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #FDF9E0;
-    border: 1px solid #CAC7C7; 
-    padding:15px 0;
-    border-radius: 0px 0px 10px 10px; */
     font-weight: 200;
     font-size: 18px;
     color: #ffffff;
     cursor:pointer
 }
 
-.additional_service h3{
-    /* display: block;
-    width: 100%;
-    height: 100%; */
+.photobook_calculator_block .parameter{
+    position: relative;
+    width: 180px;
+    height: auto;
+    margin:0 auto;
+}
+
+.photobook_calculator_block .parameter input{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .additional_service a{
@@ -308,9 +206,89 @@ header{
     justify-content: center;
     align-items: center;
     padding:85px 0px;
-    /* display: block;
+}
+
+.photobooks_calculator .headline{
+    text-align: center;
+    padding:65px 0 125px;
+}
+
+.photobooks_calculator .parameter_block{
+    padding:25px;
+}
+
+.parameter_block input{
+    padding:10px 5px;
+    font-size: 20px;
+}
+
+.photobooks_calculator .parameters{
+    display: none;
+    gap:60px;
+}
+
+.photobooks_calculator .parameters.selected{
+    display: grid;
+}
+
+.photobooks_calculator label.selected{
+    outline: 3px solid orange;
+}
+
+.photobooks_calculator h2{
+    cursor: pointer;
+}
+
+.photobooks_calculator .parameter label{
+    cursor: pointer;
+    display: block;
     width: 100%;
-    height: 100%; */
+    height: 100%;
+    padding:5px;
+}
+
+.photobook_calculator_block{
+    display: flex;
+    justify-content: space-between;
+}
+
+.photobook_calculator{
+    background-color: orange;
+    padding: 10px 15px;
+    height:400px;
+}
+
+.less_details_block p{
+    margin-bottom: 20px;
+}
+
+.photobook_calculator .details_text{
+    display: flex;
+    text-decoration: underline;
+    font-size: 15px;
+    color:white;
+    gap:20px;
+}
+
+.photobook_calculator .less_details_block{
+    padding-top: 60px;
+}
+
+.photobooks_calculator .parameter label img{
+    display: block;
+    margin: 19px auto;
+}
+
+.photobooks_calculator .parameter .parameter_name{
+    display: block;
+    text-align: center;
+    padding:10px 0;
+    background-color: rgb(184, 184, 184);
+
+}
+
+.photobooks_calculator .parameter input{
+    opacity: 0;
 }
 
 footer{
@@ -320,7 +298,6 @@ footer{
 .container_footer{
     display: flex;
     justify-content: space-between;
-    /* padding:65px 0; */
 }
 
 .container_footer .photographer_icon{
@@ -374,146 +351,20 @@ footer{
     height: 100%;
 }
 
-@media screen and (min-width:860px){
-    .photographer_info_page .photographer_icon{
-        width: 325px;
-        height: 325px;
-    }
-    /* .photo_gallery.wedding .photos.row1{
-        grid-template-columns: 1fr 2fr;
-    }
-    
-    .photo_gallery.wedding .photos.row2{
-        grid-template-columns: 2fr 1fr 1fr;
-    }
-    
-    .photo_gallery.lovestory .photos.row1{
-        grid-template-columns: 2fr 1fr;
-    }
-    
-    .photo_gallery.lovestory .photos.row2{
-        grid-template-columns: 1fr 1fr 2fr;
-    }
-    
-    .photo_gallery.school .photos.row1,
-    .photo_gallery.school .photos.row2{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .photo_gallery.birthday .photos.row1,
-    .photo_gallery.birthday .photos.row2{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .photo_gallery.vignette .photos.row1,
-    .photo_gallery.vignette .photos.row2{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    
-    .photo_gallery.individual .photos.row1{
-        grid-template-columns: 1fr 2fr;
-    }
-    
-    .photo_gallery.individual .photos.row2{
-        grid-template-columns: 2fr 1fr 1fr;
-    }
-    .additional_services{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-    } */
+@media screen and (min-width:875px){
 
-    .photo_gallery.wedding .photos.row1{
-        grid-template-columns: 1fr 2fr;
-    }
-    
-    .photo_gallery.wedding .photos.row2{
-        grid-template-columns: 2fr 1fr 1fr;
+    header{
+        display: block;    
+        position: sticky;
+        top: 0;
+        z-index: 10;
     }
 
-    .photo_gallery.wedding .photos.row3{
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .photo_gallery.wedding .photos.row4{
-        grid-template-columns: 1fr 1fr 2fr;
-    }
-
-    .photo_gallery.wedding .photos.row5{
-        grid-template-columns: repeat(2,1fr);
-    }
-    
-    .photo_gallery.lovestory .photos.row1{
-        grid-template-columns: 2fr 1fr;
-    }
-    
-    .photo_gallery.lovestory .photos.row2{
-        /* grid-template-columns: 1fr 1fr 2fr; */
-        grid-template-columns: 2fr 1fr;
-    }
-    
-    .photo_gallery.lovestory .photos.row3{
-        grid-template-columns: 2fr 1fr 1fr;
-    }
-
-    .photo_gallery.lovestory .photos.row4{
-        grid-template-columns: 2fr 1fr 1fr;
-    }
-
-    .photo_gallery.lovestory .photos.row5{
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .photo_gallery.lovestory .photos.row6{
-        grid-template-columns: 1fr 2fr 1fr;
-    }
-
-    .photo_gallery.lovestory .photos.row7{
-        grid-template-columns: 1fr 2fr;
-    }
-
-    .photo_gallery.lovestory .photos.row8{
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .photo_gallery.lovestory .photos.row9{
-        grid-template-columns: 2fr 1fr;
-    }
-
-    .photo_gallery.lovestory .photos.row10{
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .photo_gallery.lovestory .photos.row11{
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .photo_gallery.lovestory .photos.row12{
-        /* grid-template-columns: repeat(2,1fr); */
-    }
-
-    .photo_gallery.school .photos.row1,
-    .photo_gallery.school .photos.row2{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .photo_gallery.birthday .photos.row1,
-    .photo_gallery.birthday .photos.row2{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .photo_gallery.vignette .photos.row1,
-    .photo_gallery.vignette .photos.row2{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    
-    .photo_gallery.individual .photos.row1{
-        grid-template-columns: repeat(2,1fr);
-    }
-    
-    .photo_gallery.individual .photos.row2{
-        grid-template-columns: repeat(2,1fr);
+    .header_icon{
+        
+        position: absolute;
+        top: 0;
+        left: 0;
     }
     
     .additional_services{
@@ -524,7 +375,7 @@ footer{
 }
 
 
-@media screen and (max-width:860px){
+@media screen and (max-width:875px){
     .container_head,
     .navigation_block,
     .navigation_block ul{
@@ -540,27 +391,27 @@ footer{
     .photographer_icon{
         margin:0 auto;
     }
-    .photo_options{
-        flex-direction: column;
-    }
-    /* .photographer_info_page .photographer_icon{
-        max-width: 325px;
-        max-height: 325px;
-    } */
     .additional_service{
-        
         margin: 0 auto;
-        /* padding:85px 10vw; */
     }
     .additional_service a{
         padding:85px 10vw;
     }
-    .photographer_quality{
-        flex-direction: column;
-        align-items: center;
-    }
     .container_footer{
         flex-direction: column;
         align-items: center;
+    }
+    
+}
+
+@media screen and (max-width:940px){
+    .photobook_calculator_block{
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width:795px){
+    .photobooks_calculator .parameters{
+        grid-template-columns: repeat(3, 1fr);
     }
 }

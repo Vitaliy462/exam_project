@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacts</title>
-    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style_contacts.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -46,32 +47,11 @@
         </div>
     </header>
     <main>
+
+        <div class="header_icon" id="header_icon" onclick="openHeader()"><img src="images/header_menu.png" alt=""></div>
+
         <div class="container container_2">
             <div class="photographer_info">
-                <!-- <div class="photographer_info_text">
-                    <h1 class="name">ФОТОГРАФ НАЗАРІЙ КЛЮКАЙ</h1>
-                    <div class="infos">
-                        <p class="info">Привіт! Мене звати Назарій. Якщо Вас цікавить фотограф, то Ви
-                        знайшли потрібну сторінку. Я займаюсь професійною фотозйомкою
-                        весілля, випускних вечорів, фотографую для вінєтки, роблю красиві
-                        кадри святкування день народження, захоплююсь портретними
-                        фотосесіями за сценарієм.</p>
-                        <p class="info">Я можу більше поспілкуватись з Вами про Ваше свято, запропонувати
-                        варіанти, висловити своє професійне бачення, щоб Ваше свято
-                        пройшло на ура.</p>
-                        <p class="info">Якщо вам зручно, можете зателефонувати мені. Якщо ж вам краще у
-                        текстовому форматі, можемо почати чат у вайбері, інстаграм чи
-                        фейсбук. Радий бути Вам корисний.</p>
-                    </div>
-                </div>
-                <div class="photographer_info_page">
-                    <div class="photographer_icon"><img src="images/photographer_icon.png" alt="" class="icon"></div>
-                    <div class="photographer_contacts">
-                        <div class="photographer_contact"><a href="#">Viber</a></div>
-                        <div class="photographer_contact"><a href="#">Telegram</a></div>
-                        <div class="photographer_contact"><a href="#">Зателефонувати</a></div>
-                    </div>
-                </div> -->
                 <div class="photographer_info_page">
                     <div class="photographer_icon"><img src="images/photo_photographer.png" alt="" class="icon"></div>
                     <div class="photographer_contacts">
@@ -127,5 +107,16 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function openHeader(){
+            var header = document.querySelector("header")
+            if(header.classList.contains("selected")){
+                header.classList.remove("selected")
+            }else{
+                header.classList.add("selected")
+            }
+        }
+    </script>
 </body>
 </html>

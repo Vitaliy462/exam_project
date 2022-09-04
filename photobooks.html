@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photobooks</title>
     <link rel="stylesheet" href="css/style_photobooks.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
     <body>
@@ -34,19 +35,21 @@
                     </nav>
                     <div class="contacts_block" id="contacts">
                         <a class="contact_block" id="contact" href="#">
-                                <img src="images/facebook_icon2.png" alt="" class="icon">
+                            <img src="images/facebook_icon2.png" alt="" class="icon">
                         </a>
                         <a class="contact_block" id="contact" href="#">
-                                <img src="images/instagram2_icon.png" alt="" class="icon">
+                            <img src="images/instagram2_icon.png" alt="" class="icon">
                         </a>
                         <a class="contact_block" id="contact" href="#">
-                                <img src="images/youtube2_icon.png" alt="" class="icon">
+                            <img src="images/youtube2_icon.png" alt="" class="icon">
                         </a>
                     </div>
                 </div>
             </div>
         </header>
+        
         <main>
+            <div class="header_icon" id="header_icon" onclick="openHeader()"><img src="images/header_menu.png" alt=""></div>
             <div class="photobook_text">
                 <div class="container container_photobook_text">
                     <div class="photobook_page">
@@ -59,39 +62,183 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="container container_5">
-                <div class="additional_services_block">
-                    <div class="additional_services">
-                        <div class="additional_service wedding_photobooks">
-    
-                            <div class="service_name"><h3><a href="prices_count.html">ВЕСІЛЬНІ ФОТОКНИГИ</a></h3></div>
-
-                        </div>
-                        <div class="additional_service classic_photobooks">
-                            <div class="service_name"><h3><a href="portfolio.html">КЛАСИЧНІ ФОТОКНИГИ</a></h3></div>
-
-                        </div>
-                        <div class="additional_service graduation_photobooks">
-                            <div class="service_name"><h3><a href="graduation_photobooks.html">ВИПУСКНІ ФОТОКНИГИ</a></h3></div>
+            <div class="photobooks_calculator">
+                <div class="container container_photobook_calculator">
+                    <h1 class="headline">Параметри фотокниги</h1>
+                    <div class="photobook_calculator_block">
+                        <form action="" class="photobook_form">
+                            <div class="parameter_block">
+                                <div class="parameter_block_desc">
+                                    <img src="" alt="">
+                                    <h2 class="parameter_block_name" id="photobook_size_parameters">Формат <span class="size_value photobook_value">15x15 пластик</span></h2>
+                                </div>
+                                <div class="parameters  photobook_size_parameters">
+                                    <div class="parameter photobook_size_parameter">
+                                        <input type="radio" data-price="900" name="photobook_size" id="photobook_15_15">
+                                        <label data-price="900" class="photobook_size_label" for="photobook_15_15">
+                                            <img src="images/photobook_15x15.jpg" alt="">
+                                            <span class="parameter_name parameter_size_name">15x15 пластик</span>
+                                        </label>
+                                    </div>
+                                    <div class="parameter photobook_size_parameter">
+                                        <input type="radio" data-price="800" name="photobook_size" id="photobook_20_20">
+                                        <label data-price="800" class="photobook_size_label" for="photobook_20_20">
+                                            <img src="images/photobook_20x20.png" alt="">
+                                            <span class="parameter_name parameter_size_name">20x20 пластик</span>
+                                        </label>
+                                    </div>
+                                    <div class="parameter photobook_size_parameter">
+                                        <input type="radio" data-price="700" name="photobook_size" id="photobook_20_30">
+                                        <label data-price="700" class="photobook_size_label" for="photobook_20_30">
+                                            <img src="images/photobook_20x30.png" alt="">
+                                            <span class="parameter_name parameter_size_name">20x30 пластик</span>
+                                        </label>
+                                    </div>
+                                    <div class="parameter photobook_size_parameter">
+                                        <input type="radio" data-price="600" name="photobook_size" id="photobook_30_20">
+                                        <label data-price="600" class="photobook_size_label" for="photobook_30_20">
+                                            <img src="images/photobook_30x20.png" alt="">
+                                            <span class="parameter_name parameter_size_name">30x20 пластик</span>
+                                        </label>
+                                    </div>
+                                    <div class="parameter photobook_size_parameter">
+                                        <input type="radio" data-price="500" name="photobook_size" id="photobook_25_25">
+                                        <label data-price="500" class="photobook_size_label" for="photobook_25_25">
+                                            <img src="images/photobook_25x25.jpg" alt="">
+                                            <span class="parameter_name parameter_size_name">25x25 пластик</span>
+                                        </label>
+                                    </div>
+                                    <div class="parameter photobook_size_parameter">
+                                        <input type="radio" data-price="400" name="photobook_size" id="photobook_30_30">
+                                        <label data-price="400" class="photobook_size_label" for="photobook_30_30">
+                                            <img src="images/photobook_30x30.png" alt="">
+                                            <span class="parameter_name parameter_size_name">30x30 пластик</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="parameter_block">
+                                <h3>Кіл-ть розворотів:(*)</h3>
+                                <input type="text" value="5" data-price="37" class="photobook_turns" id="photobook_turns">
+                            </div>
+                            <div class="parameter_block">
+                                <h3>Кіл-ть екземплярів(*)</h3>
+                                <input type="text" value="1" class="photobook_copies" id="photobook_copies">
+                            </div>
+                            <div class="parameter_block">
+                                <div class="parameter_block_desc">
+                                    <img src="" alt="">
+                                    <h2 class="parameter_block_name" id="photobook_cover_parameters">Обкладинка <span class="cover_value photobook_value"></span></h2>
+                                </div>
+                                <div class="parameters photobook_cover_parameters">
+                                    <div class="parameter photobook_cover_parameter" data-price="0.5">
+                                        <input type="radio" data-price="800" name="photo_cover_type" id="photobook_photo_cover">
+                                        <label class="photobook_cover_label" for="photobook_photo_cover">
+                                            <span class="parameter_name parameter_cover_name">Фотообкладинка</span>
+                                        </label>
+                                    </div>
+                                    <div class="parameter photobook_cover_parameter" data-price="0.4">
+                                        <input type="radio" data-price="700" name="photo_cover_type" id="photobook_passe_partout">
+                                        <label class="photobook_cover_label" for="photobook_passe_partout">
+                                            <span class="parameter_name parameter_cover_name">З паспарту</span>
+                                        </label>
+                                    </div>
+                                    <div class="parameter photobook_cover_parameter" data-price="0.3">
+                                        <input type="radio" data-price="600" name="photo_cover_type" id="photobook_fabric">
+                                        <label class="photobook_cover_label" for="photobook_fabric">
+                                            <span class="parameter_name parameter_cover_name">Тканинні</span>
+                                        </label>
+                                    </div>
+                                    <div class="parameter photobook_cover_parameter" data-price="0.2">
+                                        <input type="radio" data-price="500" name="photo_cover_type" id="photobook_leatherette">
+                                        <label class="photobook_cover_label" for="photobook_leatherette">
+                                            <span class="parameter_name parameter_cover_name">Зі шкірозамінника</span>
+                                        </label>
+                                    </div>
+                                    <div class="parameter photobook_cover_parameter" data-price="0.1">
+                                        <input type="radio" data-price="400" name="photo_cover_type" id="photobook_leather">
+                                        <label class="photobook_cover_label" for="photobook_leather">
+                                            <span class="parameter_name parameter_cover_name">Шкіряна</span>
+                                        </label>
+                                    </div>
+                                    <div class="parameter photobook_cover_parameter" data-price="0.09">
+                                        <input type="radio" data-price="300" name="photo_cover_type" id="photobook_swarovski">
+                                        <label class="photobook_cover_label" for="photobook_swarovski">
+                                            <span class="parameter_name parameter_cover_name">Сваровськи</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="parameter_block">
+                                <div class="parameter_block_desc">
+                                    <img src="" alt="">
+                                    <h2 class="parameter_block_name" id="photobook_packaging_parameters">Пакування <span class="packaging_value photobook_value"></span></h2>
+                                </div>
+                                <div class="parameters photobook_packaging_parameters">
+                                        <div class="parameter photobook_packaging_parameter" data-price="1.9">
+                                            <input type="radio" data-price="800" name="photobook_packaging" id="photobook_pack1">
+                                            <label data-price="600" class="photobook_packaging_label" for="photobook_pack1">
+                                                <img src="images/kraftovaya-upakovka-kartush.png" alt="">
+                                                <span class="parameter_name parameter_packaging_name">Крафтова з картушем</span>
+                                            </label>
+                                        </div>
+                                        <div class="parameter photobook_packaging_parameter" data-price="1.8">
+                                            <input type="radio" data-price="700" name="photobook_packaging" id="photobook_pack2">
+                                            <label data-price="600" class="photobook_packaging_label" for="photobook_pack2">
+                                                <img src="images/kraftovaya-azhurnaya-upakovka.png" alt="">
+                                                <span class="parameter_name parameter_packaging_name">Крафтова ажурна</span>
+                                            </label>
+                                        </div>
+                                        <div class="parameter photobook_packaging_parameter" data-price="1.7">
+                                            <input type="radio" data-price="600" name="photobook_packaging" id="photobook_pack3">
+                                            <label data-price="600" class="photobook_packaging_label" for="photobook_pack3">
+                                                <img src="images/podarochnaya-upakovka.png" alt="">
+                                                <span class="parameter_name parameter_packaging_name">Подарункова</span>
+                                            </label>
+                                        </div>
+                                        <div class="parameter photobook_packaging_parameter" data-price="1.6">
+                                            <input type="radio" data-price="500" name="photobook_packaging" id="photobook_pack4">
+                                            <label data-price="600" class="photobook_packaging_label" for="photobook_pack4">
+                                                <img src="images/upakovka-suvenir.png" alt="">
+                                                <span class="parameter_name parameter_packaging_name">Упаковка Suvenir</span>
+                                            </label>
+                                        </div>
+                                        <div class="parameter photobook_packaging_parameter" data-price="1.5">
+                                            <input type="radio" data-price="400" name="photobook_packaging" id="photobook_pack5">
+                                            <label data-price="600" class="photobook_packaging_label" for="photobook_pack5">
+                                                <img src="images/upakovka-prestizh.png" alt="">
+                                                <span class="parameter_name parameter_packaging_name">Prestig універсальний</span>
+                                            </label>
+                                        </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="photobook_calculator">
+                            <div class="less_details_block">
+                                <p><span>Тип:</span> <span id="photobook_size_value"></span></p>
+                                <p id="photobook_material_size_value"></p> 
+                                <p>Кіл-ть розворотів: <span id="photobook_turns_value"></span></p>
+                                <p>Кіл-ть екземплярів: <span id="photobook_copies_value"></span></p>
+                                <p><span>Обкладинка: </span> <span id="photo_cover_type_value"></span></p>
+                                <p><span>Пакування: </span> <span id="photobook_packaging_value"></span></p>
+                                <h1 id="photobook_price_value">0</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
             <div class="container container_5">
                 <div class="additional_services_block">
                     <h1 class="headline">Додаткові послуги</h1>
                     <div class="additional_services">
                         <div class="additional_service wedding_photobooks">
-                            <!-- <img src="images/printed_photos_grey.png" alt=""> -->
-                            <!--<div class="service_name">--><h3><a href="prices_count.html">ДРУК ФОТО</a></h3><!--</div>-->
+                            <h3><a href="prices_count.html">ДРУК ФОТО</a></h3>
                         </div>
                         <div class="additional_service classic_photobooks">
-                            <!-- <img src="images/wedding_photobook_grey.png" alt=""> -->
-                            <!--<div class="service_name">--><h3><a href="photobooks.html">ФОТОКНИГИ</a></h3><!--</div>-->
+                            <h3><a href="photobooks.html">ФОТОКНИГИ</a></h3>
                         </div>
                         <div class="additional_service graduation_photobooks">
-                            <!-- <img src="images/photo_packaging_grey.png" alt=""> -->
-                            <!--<div class="service_name">--><h3><a href="graduation_photobooks.html">ПАКУВАННЯ</a></h3><!--</div>-->
+                            <h3><a href="packaging_photobooks.html">ПАКУВАННЯ</a></h3>
                         </div>
                     </div>
                 </div>
@@ -119,4 +266,5 @@
         </footer>
     
 </body>
+<script src="js/script_photobook.js"></script>
 </html>

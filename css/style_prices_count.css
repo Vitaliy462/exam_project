@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+li{
+    list-style-type: none;
+}
+
+.container
+{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+main .container{
+    
+    padding:125px 0;
+}
+
+.header_icon{
+    display: block;
+    position: static;
+    cursor: pointer;
+}  
+
+header.selected{
+    display: block;
+}
+
+header{
+    display: none;
+    position: static;
+    background: #D0D0D0;
+}
+
+.container_head,
+.logo_block,
+.navigation_block ,
+.navigation_block ul,
+.contacts_block{
+    display: flex;
+}
+
+.container_head{
+    justify-content: space-between;
+}
+
+.navigation_block{
+    display: flex;
+    gap:50px;
+}
+
+.navigation ul{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    gap:60px;
+}
+
+.logo_block,.navigation_block,.contacts_block{
+    align-items: center;
+}
+
+.logo_block .logo
+{
+    display: block;
+    width: 145px;
+    height: 155px;
+    overflow: hidden;
+}
+
+.logo_block .logo img{
+    display: block;
+    width: 100%;
+}
+
+.logo_block h2{
+    font-size: 25px;
+}
+
+.contacts_block
+{
+    width: 115px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact_block
+{
+    display: block;
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    transition: .5s;
+    border-radius: 50%;
+}
+
+.contact_block .icon
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.container_count_price{
+    margin:0px auto;
+}
+
+.container_count_price h1.headline{
+    text-align: center;
+    padding-bottom:125px;
+}
+
+.container_count_price .count_prices_block{
+    display: grid;
+    gap:50px;
+}
+
+.count_price{
+    display: flex;
+    flex-direction: column;
+    gap:45px;
+}
+
+.container_count_price .count{
+    max-width: 450px;
+    padding:45px;
+    background-color: #8FD796;
+    border-radius: 10%;
+    box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.75);
+}
+
+.container_count_price .count h2{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.container_count_price .count_photos{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.container_count_price .count_photos form{
+    display: flex;
+    flex-direction: column;
+}
+
+#photo_size,
+#number_photos{
+    padding:15px 0px;
+}
+
+.container_count_price .count_photos label{
+    padding:60px 0px 12px;
+}
+
+.additional_services_block .headline{
+    text-align: center;
+}
+
+.additional_services{
+    padding:145px 0 75px;
+    gap:50px;
+    display: grid;
+}
+
+.additional_service{
+    max-width: 365px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.additional_service.wedding_photobooks{
+    background-image: url(../images/wedding_photobook1.jpg);
+}
+
+
+.additional_service.classic_photobooks{
+    background-image: url(../images/classic_photobook.jpg);
+}
+
+.additional_service.graduation_photobooks{
+    background-image: url(../images/graduation_photobook.jpg);
+}
+
+.additional_service .service_img_block{
+    padding:31px 32px;
+    background-color: #E0E4FD;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.additional_service .service_img_block .service_img{
+    display: block;
+    width: 300px;
+    height: 200px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+}
+
+.additional_service .service_name{
+    font-weight: 200;
+    font-size: 18px;
+    color: #ffffff;
+    cursor:pointer
+}
+
+
+.additional_service a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:85px 0px;
+}
+
+footer{
+    background-color: #D0D0D0;
+}
+
+.container_footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_footer .photographer_icon{
+    width: 155px;
+    height: 155px;
+}
+
+.container_footer .logo{
+    display: block;
+    width: 100%;
+}
+
+.container_footer .photographer_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:20px;
+    font-size: 15px;
+}
+
+.container_footer h3.message{
+    font-weight: 200;
+    font-style: italic;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    width: 20px;
+}
+
+.container_footer .photographer_contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:30px;
+}
+
+.container_footer .social_icons{
+    display: flex;
+    gap:20px;
+}
+
+.container_footer .icon{
+    width: 30px;
+    height: 30px;
+}
+
+.container_footer .social_headline{
+    font-size: 18px;
+}
+
+.container_footer .icon img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width:875px){
+
+    header{
+        display: block;    
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .header_icon{
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .additional_services{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .container_count_price .count_prices_block{
+        grid-template-columns: repeat(2,1fr); 
+        gap:20vw;
+    }
+}
+
+
+@media screen and (max-width:875px){
+
+    .container_head,
+    .navigation_block,
+    .navigation_block ul{
+        flex-direction: column;
+    }
+
+    .navigation_block{
+        padding-left: 40px;
+        align-items: start;
+    }
+
+    .photographer_info{
+        flex-direction: column;
+    }
+
+    .photographer_icon{
+        margin:0 auto;
+    }
+    
+    .additional_service{
+        margin: 0 auto;
+        padding:85px 10vw;
+    }
+    
+    .container_footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .count{
+        margin: 0 auto;
+    }
+}

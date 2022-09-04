@@ -1,0 +1,437 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+li{
+    list-style-type: none;
+}
+
+.container
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+main .container{
+    
+    padding:125px 0;
+}
+
+.header_icon{
+    display: block;
+    position: static;
+    cursor: pointer;
+}  
+
+header.selected{
+    display: block;
+}
+
+header{
+    display: none;
+    position: static;
+    background: #D0D0D0;
+}
+
+.container_head,
+.logo_block,
+.navigation_block ,
+.navigation_block ul,
+.contacts_block{
+    display: flex;
+}
+
+.container_head{
+    justify-content: space-between;
+}
+
+.navigation_block{
+    display: flex;
+    gap:50px;
+}
+
+.navigation ul{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    gap:60px;
+}
+
+.logo_block,.navigation_block,.contacts_block{
+    align-items: center;
+}
+
+.logo_block .logo
+{
+    display: block;
+    width: 145px;
+    height: 155px;
+    overflow: hidden;
+}
+
+.logo_block .logo img{
+    display: block;
+    width: 100%;
+}
+
+.logo_block h2{
+    font-size: 25px;
+}
+
+.contacts_block
+{
+    width: 115px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact_block
+{
+    display: block;
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    transition: .5s;
+    border-radius: 50%;
+}
+
+.contact_block .icon
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio_block .headline{
+    text-align: center;
+}
+
+.portfolio_block .photo_options{
+    display:flex;
+    justify-content: center;
+    padding:155px 0 115px;
+}
+
+.photo_gallery .photo img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio_block .photo_option{
+    padding:5px 20px 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.photo_option.selected,
+.photo_option:hover{
+    border-bottom: 1px solid #000;
+}
+
+.portfolio_galleries .more_info{
+    width: 200px;
+    margin: 50px 0;
+    padding: 20px;
+    background-color: #000;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color:#fff;
+}
+
+.photo_gallery, 
+.photo_gallery .photos{
+    display: grid;
+    gap:5px;
+}
+
+.additional_services_block .headline{
+    text-align: center;
+}
+
+.additional_services{
+    padding:145px 0 75px;
+    gap:50px;
+    display: grid;
+}
+
+.additional_service{
+    max-width: 365px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+}
+
+.additional_service.printed_photos{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.44)), url(../images/printed_photos_grey.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.additional_service.wedding_photobook{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.44)), url(../images/wedding_photobook_grey.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.additional_service.photo_packaging{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.44)),url(../images/photo_packaging_grey.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.additional_service .service_img_block{
+    padding:31px 32px;
+    background-color: #E0E4FD;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.additional_service .service_img_block .service_img{
+    display: block;
+    width: 300px;
+    height: 200px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+}
+
+.additional_service .service_name{
+    font-weight: 200;
+    font-size: 18px;
+    color: #ffffff;
+    cursor:pointer
+}
+
+
+.additional_service a{
+    color:#fff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:85px 0px;
+}
+
+footer{
+    background-color: #D0D0D0;
+}
+
+.container_footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_footer .photographer_icon{
+    width: 155px;
+    height: 155px;
+}
+
+.container_footer .logo{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.container_footer .photographer_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:20px;
+    font-size: 15px;
+}
+
+.container_footer h3.message{
+    font-weight: 200;
+    font-style: italic;
+}
+
+.container_footer .photographer_contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:30px;
+}
+
+.container_footer .social_icons{
+    display: flex;
+    gap:20px;
+}
+
+.container_footer .icon{
+    width: 30px;
+    height: 30px;
+}
+
+.container_footer .social_headline{
+    font-size: 18px;
+}
+
+.container_footer .icon img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width:875px){
+    .photographer_info_page .photographer_icon{
+        width: 325px;
+        height: 325px;
+    }
+
+    header{
+        display: block;    
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .header_icon{
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .photo_gallery.wedding .photos.row1{
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    .photo_gallery.wedding .photos.row2{
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .photo_gallery.wedding .photos.row3{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .photo_gallery.wedding .photos.row4{
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+
+    .photo_gallery.wedding .photos.row5{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    .photo_gallery.lovestory .photos.row1{
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    .photo_gallery.lovestory .photos.row2{
+        grid-template-columns: 2fr 1fr;
+    }
+    
+    .photo_gallery.lovestory .photos.row3{
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .photo_gallery.lovestory .photos.row4{
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .photo_gallery.lovestory .photos.row5{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .photo_gallery.lovestory .photos.row6{
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    .photo_gallery.lovestory .photos.row7{
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .photo_gallery.lovestory .photos.row8{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .photo_gallery.lovestory .photos.row9{
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .photo_gallery.lovestory .photos.row10{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .photo_gallery.lovestory .photos.row11{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .photo_gallery.school .photos.row1,
+    .photo_gallery.school .photos.row2{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .photo_gallery.birthday .photos.row1,
+    .photo_gallery.birthday .photos.row2{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .photo_gallery.vignette .photos.row1,
+    .photo_gallery.vignette .photos.row2{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    
+    .photo_gallery.individual .photos.row1{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    .photo_gallery.individual .photos.row2{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .additional_services{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+}
+
+
+@media screen and (max-width:875px){
+    .container_head,
+    .navigation_block,
+    .navigation_block ul{
+        flex-direction: column;
+    }
+    .navigation_block{
+        padding-left: 40px;
+        align-items: start;
+    }
+    .photographer_info{
+        flex-direction: column;
+    }
+    .photographer_icon{
+        margin:0 auto;
+    }
+    .photo_options{
+        flex-direction: column;
+    }
+    .additional_service{
+        margin: 0 auto;
+    }
+    
+    .additional_service a{
+        padding:85px 10vw;
+    }
+    .photographer_quality{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container_footer{
+        flex-direction: column;
+        align-items: center;
+    }
+}

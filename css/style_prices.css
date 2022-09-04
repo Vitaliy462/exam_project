@@ -1,0 +1,353 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+li{
+    list-style-type: none;
+}
+
+.container
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+main .container{
+    padding:125px 0;
+}
+
+.header_icon{
+    display: block;
+    position: static;
+    cursor: pointer;
+}  
+
+header.selected{
+    display: block;
+}
+
+header{
+    display: none;
+    position: static;
+    background: #D0D0D0;
+}
+
+.container_head,
+.logo_block,
+.navigation_block ,
+.navigation_block ul,
+.contacts_block{
+    display: flex;
+}
+
+.container_head{
+    justify-content: space-between;
+}
+
+.navigation_block{
+    display: flex;
+    gap:50px;
+}
+
+.navigation ul{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    gap:60px;
+}
+
+.logo_block,.navigation_block,.contacts_block{
+    align-items: center;
+}
+
+.logo_block .logo
+{
+    display: block;
+    width: 145px;
+    height: 155px;
+    overflow: hidden;
+}
+
+.logo_block .logo img{
+    display: block;
+    width: 100%;
+}
+
+.logo_block h2{
+    font-size: 25px;
+}
+
+.contacts_block
+{
+    width: 115px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact_block
+{
+    display: block;
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    transition: .5s;
+    border-radius: 50%;
+}
+
+.contact_block .icon
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.container_price{
+    margin:75px auto 85px;
+}
+
+.container_price .headline{
+    text-align: center;
+}
+
+.container_price .photo_type_prices{
+    padding:90px 0 220px;
+}
+
+.container_price .photo_type_prices li{
+    text-align: center;
+    padding:6px 20px 15px;
+    cursor: pointer;
+    transition: .5s;
+    border-bottom: 1px solid #fff;
+}
+
+.container_price .photo_type_prices li.school_opt{
+    position: relative;
+}
+
+.container_price .photo_type_prices li.school_opt .popup{
+    display: none;
+    margin: 10px auto 0px;
+    width: 250px;
+    background-color: rgb(185, 184, 184);
+}
+
+.container_price .photo_type_prices li.school_opt .popup p{
+    padding:5px 10px;
+}
+
+.container_price .photo_type_prices li.school_opt .popup p:hover{
+    background:grey;
+}
+
+.container_price .photo_type_prices li:hover{
+    border-bottom: 1px solid #000;
+}
+
+.container_price .photo_type_prices li.selected{
+    border-bottom: 1px solid #000;
+}
+
+.container_price .prices{
+    display: none;
+    flex-direction: column;
+    gap:80px;
+}
+
+.container_price .prices.selected{
+    display: flex;
+}
+
+.container_price .prices.school{
+    display: block;
+}
+
+.container_price .school_type.selected{
+    display: flex;
+}
+
+.school_type{
+    display: none;
+    justify-content: space-between;
+}
+
+.container_price .price{
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #EFEFEF;
+    padding:35px 25px;
+}
+
+.container_price .price_services{
+    font-size: 15px;
+    padding-top: 30px;
+}
+
+.container_price .price_services li{
+    padding-bottom: 15px;
+}
+
+.container_price .prices .price_name{
+    text-align: center;
+}
+
+.container_price .price_info{
+    display: flex;
+    flex-direction: column;
+}
+
+.container_price .work_term{
+    font-size: 20px;
+    color:rgb(252, 70, 70);
+}
+
+.container_price .price_value{
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    padding:30px 0 15px;
+}
+
+.container_price .details_button{
+    align-self:center;
+    cursor: pointer;
+    font-size: 20px;
+    background: #FF8787;
+    border-bottom: 3px solid #000000;
+    text-align: center;
+    padding:5px 35px;
+}
+
+footer{
+    background-color: #D0D0D0;
+}
+
+.container_footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_footer .photographer_icon{
+    width: 155px;
+    height: 155px;
+}
+
+.container_footer .logo{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.container_footer .photographer_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:20px;
+    font-size: 15px;
+}
+
+.container_footer h3.message{
+    font-weight: 200;
+    font-style: italic;
+}
+
+.container_footer .photographer_contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:30px;
+}
+
+.container_footer .social_icons{
+    display: flex;
+    gap:20px;
+}
+
+.container_footer .icon{
+    width: 30px;
+    height: 30px;
+}
+
+.container_footer .social_headline{
+    font-size: 18px;
+}
+
+.container_footer .icon img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width:875px){
+
+    .container_price .prices{
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .container_price .photo_type_prices{
+        display: flex;
+        justify-content: space-between;
+    }
+    header{
+        display: block;    
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .header_icon{
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .photographer_info_page .photographer_icon{
+        width: 325px;
+        height: 325px;
+    }
+    
+    .container_price .photo_type_prices li.school_opt .popup{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+    }
+    
+}
+
+
+@media screen and (max-width:875px){
+    .container_head,
+    .navigation_block,
+    .navigation_block ul{
+        flex-direction: column;
+    }
+    .navigation_block{
+        padding-left: 40px;
+        align-items: start;
+    }
+    .photographer_info{
+        flex-direction: column;
+    }
+    .photographer_icon{
+        margin:0 auto;
+    }
+    .container_footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .price{
+        margin: 0 auto;
+    }
+}
