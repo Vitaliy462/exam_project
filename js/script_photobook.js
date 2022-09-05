@@ -113,6 +113,10 @@ document.getElementById("photobook_turns").onchange = function(){
                 }
             }
         }
+    }else if(parseInt(document.getElementById("photobook_turns").value)<5){
+        alert("Ви написали менше 5 сторінок")
+    }else{
+        alert("Ви ввели не число")
     }
 }
 
@@ -152,6 +156,10 @@ document.getElementById("photobook_copies").onchange = function(){
                 console.log(document.getElementById("photobook_price_value").innerText);
             }
         }
+    }else if(parseInt(document.getElementById("photobook_copies").value)<1){
+        alert("Ви написали менше 1 фотокниги")
+    }else{
+        alert("Ви ввели не число")
     }
 }
 

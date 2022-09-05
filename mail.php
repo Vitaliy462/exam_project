@@ -14,12 +14,14 @@ $date = $_POST['user_date'];
 $mail->isSMTP();                                // Настраиваем почту для SMTP
 $mail->Host = 'smtp.ukr.net';  															// Основкой SMTP сервер
 $mail->SMTPAuth = true;                         // Включить аутентификацию SMTP
-$mail->Username = 'itstepchild99@ukr.net';    // логин от почты с которой будут отправляться письма
-$mail->Password = 'oQoTa6f2tJRk4HN4';            // пароль от почты с которой будут отправляться письма
+//$mail->Username = 'itstepchild99@ukr.net';
+$mail->Username = 'lemeshvitaliy@ukr.net';     // логин от почты с которой будут отправляться письма
+//$mail->Password = 'oQoTa6f2tJRk4HN4'; 
+$mail->Password = 'vs6bPJPBSiCTbZCS';            // пароль от почты с которой будут отправляться письма
 $mail->SMTPSecure = 'ssl';                      // Включить шифрование ssl
 $mail->Port = 465;                                 // TCP порт для подключения / этот порт может отличаться у других провайдеров
 
-$mail->setFrom('itstepchild99@ukr.net');      // от кого будет уходить письмо для пользователя
+$mail->setFrom('lemeshvitaliy@ukr.net');      // от кого будет уходить письмо для пользователя
 //$mail->addAddress('lizanesen1999@gmail.com');                          // Кому будет приходить заявка
 $mail->addAddress('lemeshvitaliy@gmail.com');                          // Кому будет приходить заявка
 //$mail->addAddress('ellen@example.com');               // Имя не обязательно

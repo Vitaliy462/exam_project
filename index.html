@@ -104,13 +104,13 @@
                     </ul>
                 </nav>
                 <div class="contacts_block" id="contacts">
-                    <a class="contact_block" id="contact" href="#">
+                    <a class="contact_block" href="#">
                             <img src="images/facebook_icon2.png" alt="" class="icon">
                     </a>
-                    <a class="contact_block" id="contact" href="#">
+                    <a class="contact_block" href="#">
                             <img src="images/instagram2_icon.png" alt="" class="icon">
                     </a>
-                    <a class="contact_block" id="contact" href="#">
+                    <a class="contact_block" href="#">
                             <img src="images/youtube2_icon.png" alt="" class="icon">
                     </a>
                 </div>
@@ -520,25 +520,22 @@
                 </div>
             </div>
         </div>
-            <div class="container_slider">
+            <!-- <div class="container_slider">
                 <div class="swiper">
                     <div class="swiper-wrapper">
-                    <!-- Slides -->
                         <div class="swiper-slide"><img src="images/aston-martin.jpg" alt=""></div>
                         <div class="swiper-slide"><img src="images/audi-rs-e-tron-gt.jpg" alt=""></div>
                         <div class="swiper-slide"><img src="images/maserati-mc20.jpg" alt=""></div>
                         <div class="swiper-slide"><img src="images/nio-et5.jpg" alt=""></div>
                     </div>
-                    <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
                 
-                    <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 
                 </div>
                 <button id="close_slider" onclick="closeSlider()">Close</button>
-            </div>
+            </div> -->
     
         <div class="container container_5">
             <div class="additional_services_block">
@@ -730,12 +727,6 @@
                 prevEl: '.swiper-button-prev',
             },
             });
-            function printDoc(){
-                let printDocument = document.querySelector(".container_2")
-                let newWin = window.open("Print-Window")
-                newWin.document.write('<html><body onload="window.print()">' + printDocument.innerHTML + '</body></html>')
-                newWin.document.close()
-            }
             $(document).ready(function(e) {
             lc_lightbox('.elem', {
                 wrap_class: 'lcl_fade_oc',
@@ -963,6 +954,7 @@ on_close    : function() {},
         .catch((error) => {
             console.log("Error: " + error);
         })
+       
     </script>
     
     <script src="js/script.js">

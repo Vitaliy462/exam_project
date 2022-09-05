@@ -35,6 +35,12 @@ function ready(){
         }
     }
 
+    document.querySelector(".logo_block").onclick = function(e){
+        if(e.target.nodeName == "IMG"){
+            window.open("page404.html")
+        }
+    }
+
     var lastWorkSlider = document.querySelector('.last_work_slider_blocks');
     for (let i = 0; i < lastWorkSlider.childNodes.length; i++) {
         if(lastWorkSlider.childNodes[i].nodeName==="#text"){

@@ -43,13 +43,13 @@ li{
     margin-left:-100px;
 }
 
-.print_button{
+/* .print_button{
     border:none;
     cursor: pointer;
     text-transform: uppercase;
     padding:10px 20px;
     font-size: 20px;
-}
+} */
 
 .loaded .preloader{
     display: none;
@@ -293,7 +293,7 @@ main{
 .photographer_info_page .photographer_contact{
     font-size: 18px;
     color:#fff;
-    width: 295px;
+    width: 200px;
     height: 50px;
     background: #323860;
     border-bottom: 1px solid #FFFFFF;
