@@ -7,6 +7,7 @@
     <title>Photobooks</title>
     <link rel="stylesheet" href="css/style_photobooks.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 </head>
 <body>
     <body>
@@ -70,7 +71,7 @@
                             <div class="parameter_block">
                                 <div class="parameter_block_desc">
                                     <img src="" alt="">
-                                    <h2 class="parameter_block_name" id="photobook_size_parameters">Формат <span class="size_value photobook_value">15x15 пластик</span></h2>
+                                    <h2 class="parameter_block_name" id="photobook_size_parameters"><span class="icon-up"></span> Формат <span class="size_value photobook_value"><!--15x15 пластик--></span></h2>
                                 </div>
                                 <div class="parameters  photobook_size_parameters">
                                     <div class="parameter photobook_size_parameter">
@@ -128,7 +129,7 @@
                             <div class="parameter_block">
                                 <div class="parameter_block_desc">
                                     <img src="" alt="">
-                                    <h2 class="parameter_block_name" id="photobook_cover_parameters">Обкладинка <span class="cover_value photobook_value"></span></h2>
+                                    <h2 class="parameter_block_name" id="photobook_cover_parameters"><span class="icon-up"></span> Обкладинка <span class="cover_value photobook_value"></span></h2>
                                 </div>
                                 <div class="parameters photobook_cover_parameters">
                                     <div class="parameter photobook_cover_parameter" data-price="0.5">
@@ -172,7 +173,7 @@
                             <div class="parameter_block">
                                 <div class="parameter_block_desc">
                                     <img src="" alt="">
-                                    <h2 class="parameter_block_name" id="photobook_packaging_parameters">Пакування <span class="packaging_value photobook_value"></span></h2>
+                                    <h2 class="parameter_block_name" id="photobook_packaging_parameters"><span class="icon-up"></span> Пакування <span class="packaging_value photobook_value"></span></h2>
                                 </div>
                                 <div class="parameters photobook_packaging_parameters">
                                         <div class="parameter photobook_packaging_parameter" data-price="1.9">
@@ -267,4 +268,11 @@
     
 </body>
 <script src="js/script_photobook.js"></script>
+<!-- <script>
+    $(function(){
+        $('.icon-up').click(function () {
+            $(this).toggleClass('rotate')
+        })
+    })
+</script> -->
 </html>

@@ -7,6 +7,11 @@ document.querySelector(".photobook_form").onclick = function(e){
             document.getElementsByClassName(e.target.id)[0].classList.add("selected")
         }
         
+        if(!e.target.querySelector(".icon-up").classList.contains('rotate')){
+            e.target.querySelector(".icon-up").classList.add('rotate')
+        }else{
+            e.target.querySelector(".icon-up").classList.remove('rotate')
+        }
     }
     if(e.target.classList.contains("photobook_value")){
         if(document.getElementsByClassName(e.target.parentNode.id)[0].classList.contains("selected")){
@@ -14,9 +19,34 @@ document.querySelector(".photobook_form").onclick = function(e){
         }else{
             document.getElementsByClassName(e.target.parentNode.id)[0].classList.add("selected")
         }
+
+        if(!e.target.parentNode.querySelector(".icon-up").classList.contains('rotate')){
+            e.target.parentNode.querySelector(".icon-up").classList.add('rotate')
+        }else{
+            e.target.parentNode.querySelector(".icon-up").classList.remove('rotate')
+        }
+    }
+    if(e.target.classList.contains("icon-up")){
+        if(document.getElementsByClassName(e.target.parentNode.id)[0].classList.contains("selected")){
+            document.getElementsByClassName(e.target.parentNode.id)[0].classList.remove("selected")
+        }else{
+            document.getElementsByClassName(e.target.parentNode.id)[0].classList.add("selected")
+        }
+
+        if(!e.target.classList.contains('rotate')){
+            e.target.classList.add('rotate')
+        }else{
+            e.target.classList.remove('rotate')
+        }
     }
 }
+// $('.icon-up').click(function () {
+//     $(this).toggleClass('rotate')
+//   })
 
+// document.querySelector(".parameter_block_name").onclick = function(e){
+    
+// }
 for (let i = 0; i < document.getElementsByName("photobook_size").length; i++) {
     document.getElementsByName("photobook_size")[i].addEventListener("change",function(){
         for (let j = 0; j < document.getElementsByClassName("photobook_size_label").length; j++) {

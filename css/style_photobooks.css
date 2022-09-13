@@ -86,6 +86,24 @@ header{
     font-size: 25px;
 }
 
+.icon-up {
+    position: relative;
+    padding-left: 1em;
+}
+
+.icon-up::before {
+    content: '>';
+    display: block;
+    position: absolute;
+    transition: transform .2s ease;
+    transform: rotate(0);
+    left: 0;
+}
+
+.rotate.icon-up::before {
+    transform: rotate(90deg);
+}
+
 .contacts_block
 {
     width: 115px;
@@ -223,6 +241,7 @@ header{
 }
 
 .photobooks_calculator .parameters{
+    margin:30px 0;
     display: none;
     gap:60px;
 }
@@ -254,7 +273,8 @@ header{
 
 .photobook_calculator{
     background-color: orange;
-    padding: 10px 15px;
+    /* padding: 10px 15px; */
+    padding: 15px 55px;
     height:400px;
 }
 
@@ -271,7 +291,7 @@ header{
 }
 
 .photobook_calculator .less_details_block{
-    padding-top: 60px;
+    padding-top: 25px;
 }
 
 .photobooks_calculator .parameter label img{
@@ -391,6 +411,9 @@ footer{
     .photographer_icon{
         margin:0 auto;
     }
+    .photobook_calculator{
+        padding: 10px 25px;
+    }
     .additional_service{
         margin: 0 auto;
     }
@@ -404,7 +427,7 @@ footer{
     
 }
 
-@media screen and (max-width:940px){
+@media screen and (max-width:960px){
     .photobook_calculator_block{
         flex-direction: column;
     }

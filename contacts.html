@@ -61,10 +61,10 @@
                         
                     <div class="contact_icons">
                         <div class="contact_icon"><img src="images/premium-icon-instagram-3670125.png" alt=""></div>
-                        <div class="contact_icon"><img src="images/premium-icon-viber-3670059.png" alt=""></div>
+                        <!-- <div class="contact_icon"><img src="images/premium-icon-viber-3670059.png" alt=""></div> -->
                         <div class="contact_icon"><img src="images/premium-icon-youtube-3670147.png" alt=""></div>
                         <div class="contact_icon"><img src="images/free-icon-facebook-145802.png" alt=""></div>
-                        <div class="contact_icon"><img src="images/telegram.png" alt=""></div>
+                        <!-- <div class="contact_icon"><img src="images/telegram.png" alt=""></div> -->
                     </div>
                     </div>
                 </div>
@@ -84,6 +84,23 @@
                         фейсбук. Радий бути Вам корисний.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="container container_7">
+            <div class="feedback_block">
+                <h1 class="headline">Ви можете зв’язатися зі мною:</h1>
+                <form action="mail.php" class="user_info" method="POST">
+                    <input type="text" name="user_name" class="input name" id="user_name" placeholder="Ваше ім'я:">
+                    <p class="error name">Введіть ще раз ваше ім'я</p>
+                    <input type="tel" name="user_phone" class="input phone" id="user_phone" placeholder="Номер телефону:">
+                    <p class="error phone">Введіть ще раз ваш телефон</p>
+                    <input type="text" name="user_place" class="input place" id="user_place" placeholder="Місце зйомки">
+                    <p class="error place">Введіть ще раз місце зйомки</p>
+                    <input type="text" id="datepicker" name="user_date" class="input date" placeholder="Дата:"></p>
+                    <p class="error date">Введіть дату зйомки</p>
+                    <!-- <button type="submit" class="sendButton" onclick="sendInfo()">Записатися</button> -->
+                    <button type="button" class="sendButton" onclick="sendInfo()">Записатися</button>
+                </form>
             </div>
         </div>
     </main>
@@ -116,6 +133,38 @@
             }else{
                 header.classList.add("selected")
             }
+        }
+
+        function sendInfo(){
+            let userName = document.getElementById("user_name").value
+            let userPhone = document.getElementById("user_phone").value
+            let userPlace = document.getElementById("user_place").value
+            let userDate = document.getElementById("datepicker").value
+            
+            let checkName = /([а-яА-яa-zA-z]+\s)+([а-яА-яa-zA-z]+)/ig
+            let checkPhoneNum = /^([+]?[0-9\s-\(\)]{3,25})*$/i;
+            let checkPlace = /\w/
+
+            for (let i = 0; i < document.querySelectorAll('.error').length; i++) {
+                document.querySelectorAll('.error')[i].style.opacity = 0
+            }
+
+            if(!checkName.test(userName)){
+                document.querySelector('.error.name').style.opacity = 1;
+            }
+
+            if(!checkPhoneNum.test(userPhone) || userPhone.length == 0){
+                document.querySelector('.error.phone').style.opacity = 1;
+            }
+
+            if(userPlace.length == 0){
+                document.querySelector('.error.place').style.opacity = 1;
+            }
+
+            if(userDate.length == 0 ){
+                document.querySelector('.error.date').style.opacity = 1
+            }
+
         }
     </script>
 </body>

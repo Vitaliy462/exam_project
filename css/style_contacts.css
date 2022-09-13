@@ -197,6 +197,54 @@ main{
     background: #6A72AD;
 }
 
+.feedback_block .headline{
+    font-weight: 400;
+    margin-bottom: 85px;
+}
+
+.feedback_block .user_info{
+    max-width: 580px;
+}
+
+.feedback_block .input{
+    display: block;
+    width: 100%;
+    padding:20px 0;
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+}
+
+.feedback_block .iti{
+   width: 100%;
+}
+
+.feedback_block .error{
+    font-size: 20px;
+    color:red;
+    font-weight: bold;
+    opacity: 0;
+    margin-bottom: 60px;
+}
+
+.feedback_block .sendButton{
+    display: block;
+    width: 200px;
+    height: 50px;
+    background-color: #000;
+    color:white;
+    font-size: 18px;
+    font-weight: 200;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.feedback_block .sendButton:hover{
+    background-color: #fff;
+    color:#000;
+}
+
 footer{
     background-color: #D0D0D0;
 }

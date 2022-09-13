@@ -213,13 +213,14 @@ main{
 }
 
 .slider_block .slider_img:hover{
-    filter: grayscale(100%);
+    filter: grayscale(0%);
 }
 
 .slider_block .slider_img{
     transition: .5s;
     width: 100%;
     height: 100%;
+    filter: grayscale(100%);
 }
 
 .slider_buttons{
