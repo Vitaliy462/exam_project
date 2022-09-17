@@ -25,7 +25,8 @@ li{
 .container_5,
 .container_carousel{
     
-    padding:125px 0;
+    /* padding:125px 0; */
+    padding:150px 0 300px;
 }
 
 main .container{
@@ -86,8 +87,10 @@ header{
 .logo_block .logo
 {
     display: block;
-    width: 145px;
-    height: 155px;
+    /* width: 145px;
+    height: 155px; */
+    width: 125px;
+    height: 120px;
     overflow: hidden;
     /* outline: 1px solid black; */
 }
@@ -95,7 +98,7 @@ header{
 .logo_block .logo img{
     display: block;
     width: 100%;
-    /* height: 100%; */
+    height: 100%;
 }
 
 /* .logo_block .logo img:hover{
@@ -243,7 +246,7 @@ header{
 }
 
 .additional_services{
-    padding:145px 0 75px;
+    padding-top:155px;
     gap:50px;
     /* display: flex;
     justify-content: space-between; */
@@ -351,8 +354,10 @@ footer{
 }
 
 .container_footer .photographer_icon{
-    width: 155px;
-    height: 155px;
+    /* width: 155px;
+    height: 155px; */
+    width: 125px;
+    height: 125px;
 }
 
 .container_footer .logo{
@@ -399,6 +404,33 @@ footer{
     display: block;
     width: 100%;
     height: 100%;
+}
+
+.preloader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: #fff;
+    z-index:15;
+}
+
+.preloader_image{
+    width: 200px;
+    height: 200px;
+    background:url('../images1/loading.gif') no-repeat 50% 50%;
+    background-size: 200px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-100px;
+    margin-left:-100px;
+}
+
+.loaded .preloader{
+    display: none;
 }
 
 @media screen and (min-width:875px){
@@ -563,8 +595,16 @@ footer{
     
 }
 
+@media screen and (max-width:1000px){
+    .logo_block{
+        flex-direction: column;
+    }
+}
 
 @media screen and (max-width:875px){
+    .logo_block h2{
+        padding:50px 0;
+    }
     .container_head,
     .navigation_block,
     .navigation_block ul{

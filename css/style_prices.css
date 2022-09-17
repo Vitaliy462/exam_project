@@ -21,7 +21,8 @@ li{
 }
 
 main .container{
-    padding:125px 0;
+    /* padding:125px 0; */
+    padding:150px 0 300px;
 }
 
 .header_icon{
@@ -71,14 +72,17 @@ header{
 .logo_block .logo
 {
     display: block;
-    width: 145px;
-    height: 155px;
+    /* width: 145px;
+    height: 155px; */
+    width: 125px;
+    height: 120px;
     overflow: hidden;
 }
 
 .logo_block .logo img{
     display: block;
     width: 100%;
+    height:100%;
 }
 
 .logo_block h2{
@@ -109,16 +113,17 @@ header{
     height: 100%;
 }
 
-.container_price{
+/* .container_price{
     margin:75px auto 85px;
-}
+} */
 
 .container_price .headline{
     text-align: center;
 }
 
 .container_price .photo_type_prices{
-    padding:90px 0 220px;
+    /* padding:90px 0 220px; */
+    padding:155px 0;
 }
 
 .container_price .photo_type_prices li{
@@ -238,8 +243,10 @@ footer{
 }
 
 .container_footer .photographer_icon{
-    width: 155px;
-    height: 155px;
+    /* width: 155px;
+    height: 155px; */
+    width: 125px;
+    height: 120px;
 }
 
 .container_footer .logo{
@@ -288,6 +295,33 @@ footer{
     height: 100%;
 }
 
+.preloader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: #fff;
+    z-index:15;
+}
+
+.preloader_image{
+    width: 200px;
+    height: 200px;
+    background:url('../images1/loading.gif') no-repeat 50% 50%;
+    background-size: 200px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-100px;
+    margin-left:-100px;
+}
+
+.loaded .preloader{
+    display: none;
+}
+
 @media screen and (min-width:875px){
 
     .container_price .prices{
@@ -326,8 +360,20 @@ footer{
     
 }
 
+@media screen and (max-width:1000px){
+    .logo_block{
+        flex-direction: column;
+    }
+}
 
 @media screen and (max-width:875px){
+    /* .logo_block{
+        flex-direction: column;
+    } */
+    
+    .logo_block h2{
+        padding:50px 0;
+    }
     .container_head,
     .navigation_block,
     .navigation_block ul{

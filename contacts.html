@@ -7,12 +7,20 @@
     <title>Contacts</title>
     <link rel="stylesheet" href="css/style_contacts.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+   />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 </head>
 <body>
+    <!-- <div class="preloader">
+        <div class="preloader_image"></div>
+    </div> -->
     <header>
         <div class="container container_head">
             <div class="logo_block">
-                <a href="#" class="logo"><img src="images/head_logo.png" alt=""></a>
+                <a href="index.html" class="logo"><img src="images/head_logo.png" alt=""></a>
                 <h2>Фотограф Назарій Клюкай</h2>
             </div>
             <div class="navigation_block">
@@ -69,7 +77,7 @@
                     </div>
                 </div>
                 <div class="photographer_info_text">
-                    <h2 class="name">ФОТОГРАФ НАЗАРІЙ КЛЮКАЙ</h2>
+                    <h1 class="name">ФОТОГРАФ НАЗАРІЙ КЛЮКАЙ</h1>
                     <div class="infos">
                         <p class="info">Привіт! Мене звати Назарій. Якщо Вас цікавить фотограф, то Ви
                         знайшли потрібну сторінку. Я займаюсь професійною фотозйомкою
@@ -100,6 +108,7 @@
                     <p class="error date">Введіть дату зйомки</p>
                     <!-- <button type="submit" class="sendButton" onclick="sendInfo()">Записатися</button> -->
                     <button type="button" class="sendButton" onclick="sendInfo()">Записатися</button>
+                    <p class="send_message">Дякую! Інформація була відправлена.</p>
                 </form>
             </div>
         </div>
@@ -124,8 +133,43 @@
             </div>
         </div>
     </footer>
-
     <script>
+
+        // window.onload = function(){
+        //     window.setTimeout(function(){
+        //         document.body.classList.add("loaded")
+        //     }, 2000)
+        // }    
+
+
+        const phoneInputField = document.querySelector("#user_phone");
+        // const phoneInput = window.intlTelInput(phoneInputField, {
+        //     utilsScript:
+        //     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        // });
+        const phoneInput = window.intlTelInput(phoneInputField, {
+            initialCountry: "auto",
+            geoIpLookup: getIp,
+            utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+
+        function getIp(callback) {
+            fetch('https://ipinfo.io/json?token=c606526f199f74', { headers: { 'Accept': 'application/json' }})
+            .then((resp) => resp.json())
+            .catch(() => {
+                return {
+                country: 'us',
+                };
+            })
+            .then((resp) => callback(resp.country));
+        }
+        // const phoneInput = window.intlTelInput(phoneInputField, {
+        //     initialCountry: "auto",
+        //     geoIpLookup: getIp,
+        //     utilsScript:
+        //     "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        // });
         function openHeader(){
             var header = document.querySelector("header")
             if(header.classList.contains("selected")){
@@ -134,37 +178,52 @@
                 header.classList.add("selected")
             }
         }
-
         function sendInfo(){
             let userName = document.getElementById("user_name").value
             let userPhone = document.getElementById("user_phone").value
             let userPlace = document.getElementById("user_place").value
             let userDate = document.getElementById("datepicker").value
-            
+            let isErrorData =false
+
             let checkName = /([а-яА-яa-zA-z]+\s)+([а-яА-яa-zA-z]+)/ig
             let checkPhoneNum = /^([+]?[0-9\s-\(\)]{3,25})*$/i;
             let checkPlace = /\w/
-
+            
+            document.querySelector('.send_message').style.opacity = 0;
+            
             for (let i = 0; i < document.querySelectorAll('.error').length; i++) {
                 document.querySelectorAll('.error')[i].style.opacity = 0
             }
 
             if(!checkName.test(userName)){
                 document.querySelector('.error.name').style.opacity = 1;
+                // document.querySelector('.send_message').style.opacity = 0;
             }
 
             if(!checkPhoneNum.test(userPhone) || userPhone.length == 0){
                 document.querySelector('.error.phone').style.opacity = 1;
+                // document.querySelector('.send_message').style.opacity = 0;
             }
 
             if(userPlace.length == 0){
                 document.querySelector('.error.place').style.opacity = 1;
+                // document.querySelector('.send_message').style.opacity = 0;
             }
 
             if(userDate.length == 0 ){
-                document.querySelector('.error.date').style.opacity = 1
+                document.querySelector('.error.date').style.opacity = 1;
+                // document.querySelector('.send_message').style.opacity = 0;
             }
-
+            for (let i = 0; i < document.querySelectorAll(".error").length; i++) {
+                if(+window.getComputedStyle(document.querySelectorAll(".error")[i]).getPropertyValue("opacity") == 1){
+                    isErrorData = true
+                }
+            }
+            if(isErrorData){
+                document.querySelector('.send_message').style.opacity = 0;
+            }else{
+                document.querySelector('.send_message').style.opacity = 1;
+            }
         }
     </script>
 </body>

@@ -1,6 +1,8 @@
-window.onload = function(){
+function ready(){
     document.getElementById("photo_size").value = ""
 }
+
+document.addEventListener("DOMContentLoaded", ready);
 
 document.getElementById("photo_size").onchange = function(){
     document.getElementById("price_one_val").innerText = document.getElementById("photo_size").value

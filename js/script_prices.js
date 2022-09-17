@@ -1,4 +1,5 @@
-window.onload = ()=>{
+//window.onload = ()=>{
+function ready(){
     var allPrices = document.getElementById("all_prices")
     for(let i = 0;i<allPrices.childNodes.length;i++){
         if(allPrices.childNodes[i].nodeName == "#text"){
@@ -20,6 +21,8 @@ window.onload = ()=>{
         }
     }
 }
+
+document.addEventListener("DOMContentLoaded",ready);
 
 document.getElementById("school_opt").onmouseover = function(){
     document.getElementById("popup").style.display = 'block'

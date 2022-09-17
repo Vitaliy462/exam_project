@@ -61,10 +61,27 @@ function ready(){
         }
     }
    const phoneInputField = document.getElementById("user_phone");
-   const phoneInput = window.intlTelInput(phoneInputField, {
-     utilsScript:
-       "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-   });
+//    const phoneInput = window.intlTelInput(phoneInputField, {
+//      utilsScript:
+//        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+//    });
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        initialCountry: "auto",
+        geoIpLookup: getIp,
+        utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+
+    function getIp(callback) {
+        fetch('https://ipinfo.io/json?token=c606526f199f74', { headers: { 'Accept': 'application/json' }})
+        .then((resp) => resp.json())
+        .catch(() => {
+            return {
+            country: 'us',
+            };
+        })
+        .then((resp) => callback(resp.country));
+    }
 }
 
 document.addEventListener("DOMContentLoaded", ready);
@@ -275,31 +292,47 @@ function sendInfo(){
     let userPhone = document.getElementById("user_phone").value
     let userPlace = document.getElementById("user_place").value
     let userDate = document.getElementById("datepicker").value
-    
+    let isErrorData =false
+
     let checkName = /([а-яА-яa-zA-z]+\s)+([а-яА-яa-zA-z]+)/ig
     let checkPhoneNum = /^([+]?[0-9\s-\(\)]{3,25})*$/i;
     let checkPlace = /\w/
-
+    
+    document.querySelector('.send_message').style.opacity = 0;
+    
     for (let i = 0; i < document.querySelectorAll('.error').length; i++) {
         document.querySelectorAll('.error')[i].style.opacity = 0
     }
 
     if(!checkName.test(userName)){
         document.querySelector('.error.name').style.opacity = 1;
+        // document.querySelector('.send_message').style.opacity = 0;
     }
 
     if(!checkPhoneNum.test(userPhone) || userPhone.length == 0){
         document.querySelector('.error.phone').style.opacity = 1;
+        // document.querySelector('.send_message').style.opacity = 0;
     }
 
     if(userPlace.length == 0){
         document.querySelector('.error.place').style.opacity = 1;
+        // document.querySelector('.send_message').style.opacity = 0;
     }
 
     if(userDate.length == 0 ){
-        document.querySelector('.error.date').style.opacity = 1
+        document.querySelector('.error.date').style.opacity = 1;
+        // document.querySelector('.send_message').style.opacity = 0;
     }
-
+    for (let i = 0; i < document.querySelectorAll(".error").length; i++) {
+        if(+window.getComputedStyle(document.querySelectorAll(".error")[i]).getPropertyValue("opacity") == 1){
+            isErrorData = true
+        }
+    }
+    if(isErrorData){
+        document.querySelector('.send_message').style.opacity = 0;
+    }else{
+        document.querySelector('.send_message').style.opacity = 1;
+    }
 }
 $(function() 
 {

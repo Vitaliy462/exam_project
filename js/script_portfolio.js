@@ -1,4 +1,5 @@
-window.onload = function(){
+// window.onload = function(){
+function ready(){
 
     var portfolioGalleries = document.querySelector('.portfolio_galleries');
     for (let i = 0; i < portfolioGalleries.childNodes.length; i++) {
@@ -31,6 +32,7 @@ window.onload = function(){
     }
 }
 
+document.addEventListener("DOMContentLoaded",ready);
 
 document.querySelector(".photo_options").onclick = (e)=>{
     if(e.target.className == "photo_option"){

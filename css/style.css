@@ -56,7 +56,8 @@ li{
 }
 
 main .container{
-    padding:125px 0;
+    /* padding:125px 0; */
+    padding:150px 0 300px;
 }
 
 body {
@@ -104,6 +105,10 @@ header{
     gap:60px;
 }
 
+/* .logo_block{
+    flex-direction: column;
+} */
+
 .logo_block,.navigation_block,.contacts_block{
     align-items: center;
 }
@@ -111,14 +116,17 @@ header{
 .logo_block .logo
 {
     display: block;
-    width: 145px;
-    height: 155px;
+    /* width: 145px; */
+    /* height: 155px; */
+    width: 125px;
+    height: 120px;
     overflow: hidden;
 }
 
 .logo_block .logo img{
     display: block;
     width: 100%;
+    height: 100%;
 }
 
 .logo_block h2{
@@ -167,7 +175,8 @@ main{
 }
 
 .slider .arrow{
-    padding:25vw 0;
+    /* padding:25vw 0; */
+    padding:25vw 15px;
     align-self: center;
     cursor: pointer;
 }
@@ -202,6 +211,7 @@ main{
 
 .slider_block{
     width: 100%;
+    height: 100%;
     position: absolute;
     transition: .3s;
     top: 0;
@@ -256,20 +266,31 @@ main{
 
 .photographer_info_text{
     max-width: 1000px;
-    padding:125px 55px 120px;
+    /* padding:125px 55px 120px; */
+    padding:0px 55px;
     font-size:20px;
+    /* font-size:2.5vmin; */
+}
+
+.photographer_info_text h1.name{
+    /* font-size:2.5vw; */
 }
 
 .photographer_info_text .infos{
     padding-top: 120px;
+    display: grid;
+    gap:60px;
+    /* font-size:1.3vw; */
+    /* font-size:2.5vh; */
 }
 
 .photographer_info_text .info{
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
 }
 
 .photographer_info_page{
-    padding:100px 70px;
+    /* padding:100px 70px; */
+    padding:0px 70px;
 }
 
 .photographer_info_page .photographer_icon{
@@ -288,14 +309,15 @@ main{
     flex-direction: column;
     align-items: center;
     gap:25px;
-    padding-top: 40px;
+    /* padding-top: 40px; */
+    padding-top: 25px;
 }
 
 .photographer_info_page .photographer_contact{
     font-size: 18px;
     color:#fff;
     width: 200px;
-    height: 50px;
+    /* height: 50px; */
     background: #323860;
     border-bottom: 1px solid #FFFFFF;
     text-align: center;
@@ -315,7 +337,8 @@ main{
 
 .last_work_block .headline{
     text-align: center;
-    margin-bottom: 205px;
+    /* margin-bottom: 205px; */
+    margin-bottom: 155px;
 }
 
 .last_work_slider{
@@ -324,7 +347,8 @@ main{
 }
 
 .last_work_slider .arrow{
-    padding:5vw 0;
+    /* padding:5vw 0; */
+    padding:5vw 15px;
     align-self: center;
     cursor: pointer;
 }
@@ -442,7 +466,8 @@ main{
 
 .portfolio_galleries .more_info{
     width: 200px;
-    margin: 50px 0;
+    /* margin: 50px 0; */
+    margin-top: 50px;
     background-color: #000;
     border: 1px solid #fff;
     font-size: 18px;
@@ -469,7 +494,8 @@ main{
 }
 
 .additional_services{
-    padding:145px 0 75px;
+    /* padding:145px 0 75px; */
+    padding:155px 0 0px;
     gap:50px;
     display: grid;
 }
@@ -537,7 +563,8 @@ main{
 .container_questions .question_blocks{
     display: grid;
     gap:15px;
-    padding:100px 0;
+    /* padding:100px 0; */
+    padding:155px 0 0;
 }
 
 .container_questions .question_block{
@@ -606,14 +633,15 @@ main{
 }
 
 .photographer_quality{
-    padding:145px 0 75px;
+    /* padding:145px 0 75px; */
+    padding:155px 0 0;
     display: flex;
     justify-content: space-between;
 }
 
 .quality{
     max-width: 310px;
-    height: 275px;
+    /* height: 275px; */
     display: flex;
     flex-direction: column;    
     align-items: center;
@@ -630,7 +658,8 @@ main{
 
 .feedback_block .headline{
     font-weight: 400;
-    margin-bottom: 85px;
+    /* margin-bottom: 85px; */
+    margin-bottom: 155px;
 }
 
 .feedback_block .user_info{
@@ -644,6 +673,10 @@ main{
     font-size: 15px;
     border: none;
     border-bottom: 1px solid black;
+    background: transparent;
+}
+
+.feedback_block .input:-internal-autofill-selected{
     background: transparent;
 }
 
@@ -671,6 +704,13 @@ main{
     cursor: pointer;
 }
 
+.feedback_block .send_message{
+    opacity: 0;
+    color:rgb(56, 190, 56);
+    transition: .2s;
+    font-size: 20px;
+}
+
 .feedback_block .sendButton:hover{
     background-color: #fff;
     color:#000;
@@ -686,8 +726,10 @@ footer{
 }
 
 .container_footer .photographer_icon{
-    width: 155px;
-    height: 155px;
+    /* width: 155px;
+    height: 155px; */
+    width: 125px;
+    height: 120px;
 }
 
 .container_footer .logo{
@@ -779,7 +821,9 @@ body{
         top: 0;
         z-index: 10;
     }
-
+    /* .logo_block{
+        flex-direction: row;
+    } */
     .header_icon{
         
         position: absolute;
@@ -887,13 +931,36 @@ body{
     
 }
 
+@media screen and (max-width:1000px){
+    .logo_block{
+        flex-direction: column;
+    }
+}
 
 @media screen and (max-width:875px){
+    .logo_block h2{
+        padding:50px 0;
+    }
+
     .container_head,
     .navigation_block,
     .navigation_block ul{
         flex-direction: column;
     }
+
+    .photographer_info_text{
+        padding:0;
+    }
+    
+
+    .photographer_info_text h1.name{
+        font-size:7.5vw;
+    }
+    
+    .photographer_info_text .infos{
+        font-size:5.5vw;
+    }
+
     .navigation_block{
         padding-left: 40px;
         align-items: start;
